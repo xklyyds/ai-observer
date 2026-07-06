@@ -1,0 +1,37 @@
+============================================================
+AI前沿技术日报
+日期: 2026年07月02日
+============================================================
+
+【今日要闻】
+----------------------------------------
+
+1. GPT-5 模型性能大幅提升，推理速度提高300%
+   来源: OpenAI
+   摘要: OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%
+   链接: https://openai.com/blog/gpt-5-update
+
+2. DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%
+   来源: Google DeepMind
+   摘要: AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%
+   链接: https://deepmind.google/discover/blog/alphafold-update/
+
+3. Anthropic发布Claude 3.5，支持百万token上下文窗口
+   来源: Anthropic
+   摘要: Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异
+   链接: https://www.anthropic.com/index/claude-3-5
+
+4. Stable Diffusion 4发布，图像生成质量再创新高
+   来源: Stability AI
+   摘要: Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升
+   链接: https://stability.ai/news/stable-diffusion-4
+
+5. AI芯片市场竞争加剧，多家厂商推出新一代产品
+   来源: TechCrunch
+   摘要: NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著
+   链接: https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/
+
+----------------------------------------
+报告生成时间: 2026-07-02 20:00:04
+共收录 5 条新闻
+============================================================
