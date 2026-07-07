@@ -9,6 +9,80 @@ const App = {
     currentPage: 1,
     pageSize: 10,
     
+    getDeletedItems() {
+        try {
+            const stored = localStorage.getItem('aiobserver_deleted');
+            return stored ? JSON.parse(stored) : { reports: [], news: {} };
+        } catch {
+            return { reports: [], news: {} };
+        }
+    },
+    
+    saveDeletedItems(items) {
+        localStorage.setItem('aiobserver_deleted', JSON.stringify(items));
+    },
+    
+    isReportDeleted(date) {
+        const deleted = this.getDeletedItems();
+        return deleted.reports.includes(date);
+    },
+    
+    isNewsDeleted(date, newsId) {
+        const deleted = this.getDeletedItems();
+        const key = `${date}_${newsId}`;
+        return deleted.news[key] === true;
+    },
+    
+    deleteReport(date) {
+        const deleted = this.getDeletedItems();
+        if (!deleted.reports.includes(date)) {
+            deleted.reports.push(date);
+            this.saveDeletedItems(deleted);
+        }
+        this.refreshData();
+    },
+    
+    deleteNews(date, newsId) {
+        const deleted = this.getDeletedItems();
+        const key = `${date}_${newsId}`;
+        deleted.news[key] = true;
+        this.saveDeletedItems(deleted);
+        this.refreshData();
+    },
+    
+    restoreReport(date) {
+        const deleted = this.getDeletedItems();
+        deleted.reports = deleted.reports.filter(d => d !== date);
+        this.saveDeletedItems(deleted);
+        this.refreshData();
+    },
+    
+    restoreNews(date, newsId) {
+        const deleted = this.getDeletedItems();
+        const key = `${date}_${newsId}`;
+        delete deleted.news[key];
+        this.saveDeletedItems(deleted);
+        this.refreshData();
+    },
+    
+    clearAllDeleted() {
+        localStorage.removeItem('aiobserver_deleted');
+        this.refreshData();
+    },
+    
+    getFilteredReports() {
+        const deleted = this.getDeletedItems();
+        return (this.data?.reports || []).filter(report => {
+            if (deleted.reports.includes(report.date)) return false;
+            report.news = report.news.filter(news => {
+                const key = `${report.date}_${news.id}`;
+                return deleted.news[key] !== true;
+            });
+            report.newsCount = report.news.length;
+            return report.news.length > 0;
+        });
+    },
+    
     async init() {
         await this.loadData();
         this.updateSidebarStats();
@@ -383,6 +457,7 @@ const App = {
     renderNewsCard(news) {
         const tagsHtml = news.tags && news.tags.length > 0 ? 
             `<div class="news-tags">${news.tags.map(tag => `<span class="news-tag">#${tag}</span>`).join('')}</div>` : '';
+        const date = news.reportDate || (this.data?.reports?.[0]?.date || '');
         
         return `
             <div class="news-card" data-category="${news.category || ''}" data-source="${news.source || ''}">
@@ -395,14 +470,19 @@ const App = {
                     <span class="news-category">${news.category || '未分类'}</span>
                     ${tagsHtml}
                 </div>
-                ${news.link ? `<a href="${news.link}" target="_blank" class="news-link">阅读原文 ↗</a>` : ''}
+                <div class="news-actions">
+                    ${news.link ? `<a href="${news.link}" target="_blank" class="news-link">阅读原文 ↗</a>` : ''}
+                    <button class="delete-btn" onclick="App.deleteNews('${date}', ${news.id})" title="删除这条新闻">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
             </div>
         `;
     },
     
     renderReportsList() {
+        const reports = this.getFilteredReports();
         const stats = this.data?.stats || { totalReports: 0, totalNews: 0, latestDate: '', sources: [], categories: [], tags: [] };
-        const reports = this.data?.reports || [];
         
         return `
             <div class="reports-page">
@@ -411,21 +491,21 @@ const App = {
                         <div class="stat-card-header">
                             <span class="stat-card-icon blue">📰</span>
                         </div>
-                        <div class="stat-card-value">${stats.totalReports}</div>
+                        <div class="stat-card-value">${reports.length}</div>
                         <div class="stat-card-label">日报总数</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card-header">
                             <span class="stat-card-icon purple">🔍</span>
                         </div>
-                        <div class="stat-card-value">${stats.totalNews}</div>
+                        <div class="stat-card-value">${reports.reduce((acc, r) => acc + r.newsCount, 0)}</div>
                         <div class="stat-card-label">累计新闻</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card-header">
                             <span class="stat-card-icon green">📅</span>
                         </div>
-                        <div class="stat-card-value">${Math.round(stats.totalNews / (stats.totalReports || 1))}</div>
+                        <div class="stat-card-value">${Math.round(reports.reduce((acc, r) => acc + r.newsCount, 0) / (reports.length || 1))}</div>
                         <div class="stat-card-label">日均新闻</div>
                     </div>
                     <div class="stat-card">
@@ -442,22 +522,31 @@ const App = {
                         ${reports.map(report => `
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
-                                <a href="#/reports/${report.date}" class="timeline-card">
-                                    <div class="timeline-date">${report.displayDate}</div>
-                                    <div class="timeline-meta">
-                                        <span>📰 ${report.newsCount} 条新闻</span>
-                                        <span>🕐 ${report.generatedAt}</span>
-                                    </div>
-                                    <div class="timeline-preview">
-                                        ${report.news.slice(0, 2).map(n => n.title).join(' · ')}
-                                    </div>
-                                </a>
+                                <div class="timeline-card">
+                                    <a href="#/reports/${report.date}" class="timeline-link">
+                                        <div class="timeline-date">${report.displayDate}</div>
+                                        <div class="timeline-meta">
+                                            <span>📰 ${report.newsCount} 条新闻</span>
+                                            <span>🕐 ${report.generatedAt}</span>
+                                        </div>
+                                        <div class="timeline-preview">
+                                            ${report.news.slice(0, 2).map(n => n.title).join(' · ')}
+                                        </div>
+                                    </a>
+                                    <button class="delete-btn" onclick="App.deleteReport('${report.date}')" title="删除整个日报">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                    </button>
+                                </div>
                             </div>
                         `).join('')}
                     </div>
                 ` : `
                     <div class="section-card">
                         <p style="text-align:center;color:var(--text-secondary);padding:40px;">暂无报告数据</p>
+                        <p style="text-align:center;color:var(--text-secondary);padding-bottom:40px;">您可以点击下面按钮恢复已删除的日报</p>
+                        <div style="text-align:center;">
+                            <button class="btn btn-secondary" onclick="App.clearAllDeleted()">恢复所有已删除内容</button>
+                        </div>
                     </div>
                 `}
             </div>
@@ -466,10 +555,11 @@ const App = {
     
     renderSearch() {
         const stats = this.data?.stats || { categories: [], sources: [], tags: [] };
+        const reports = this.getFilteredReports();
         const allNews = [];
-        this.data?.reports?.forEach(report => {
+        reports.forEach(report => {
             report.news.forEach(news => {
-                allNews.push({ ...news, reportDate: report.displayDate });
+                allNews.push({ ...news, reportDate: report.date });
             });
         });
         
@@ -586,13 +676,36 @@ const App = {
     },
     
     renderReportDetail(date) {
+        const deleted = this.getDeletedItems();
+        if (deleted.reports.includes(date)) {
+            return `
+                <div class="report-detail">
+                    <a href="#/reports" class="back-link">
+                        <span>←</span>
+                        <span>返回日报列表</span>
+                    </a>
+                    <div class="section-card">
+                        <p style="text-align:center;color:var(--text-secondary);padding:40px;">该日报已被删除</p>
+                        <div style="text-align:center;">
+                            <button class="btn btn-secondary" onclick="App.restoreReport('${date}')">恢复此日报</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
         const report = this.data?.reports?.find(r => r.date === date);
         
         if (!report) {
             return this.renderNotFound();
         }
         
-        const categories = Object.keys(report.categories || {});
+        report.news = report.news.filter(news => {
+            const key = `${date}_${news.id}`;
+            return deleted.news[key] !== true;
+        });
+        
+        const categories = [...new Set(report.news.map(n => n.category))].filter(c => c);
         
         return `
             <div class="report-detail">
@@ -606,8 +719,12 @@ const App = {
                     <div class="detail-meta">
                         <span>📅 ${report.displayDate}</span>
                         <span>🕐 生成于 ${report.generatedAt}</span>
-                        <span>📰 共 ${report.newsCount} 条新闻</span>
+                        <span>📰 共 ${report.news.length} 条新闻</span>
                     </div>
+                    <button class="delete-btn delete-report-btn" onclick="App.deleteReport('${date}')" title="删除整个日报">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                        <span>删除日报</span>
+                    </button>
                 </div>
                 
                 ${report.trends && report.trends.topCategories.length > 0 ? this.renderDetailTrends(report.trends) : ''}
@@ -623,14 +740,19 @@ const App = {
                 
                 <h2 class="detail-news-title">今日新闻</h2>
                 <div class="news-list">
-                    ${report.news.map((news, index) => `
+                    ${report.news.length > 0 ? report.news.map((news, index) => `
                         <div class="collapsible-card" data-category="${news.category || ''}" data-source="${news.source || ''}">
                             <div class="collapsible-header">
                                 <div class="collapsible-header-left">
                                     <h3 class="collapsible-title">${news.title}</h3>
                                     <span class="collapsible-source">${news.source}</span>
                                 </div>
-                                <span class="collapsible-arrow">▼</span>
+                                <div class="collapsible-header-right">
+                                    <button class="delete-btn" onclick="App.deleteNews('${date}', ${news.id})" title="删除这条新闻">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                    </button>
+                                    <span class="collapsible-arrow">▼</span>
+                                </div>
                             </div>
                             <div class="collapsible-content">
                                 <p class="collapsible-summary">${news.summary}</p>
@@ -643,7 +765,14 @@ const App = {
                                 </div>
                             </div>
                         </div>
-                    `).join('')}
+                    `).join('') : `
+                        <div class="section-card">
+                            <p style="text-align:center;color:var(--text-secondary);padding:40px;">该日报下的所有新闻已被删除</p>
+                            <div style="text-align:center;">
+                                <button class="btn btn-secondary" onclick="App.clearAllDeleted()">恢复所有已删除内容</button>
+                            </div>
+                        </div>
+                    `}
                 </div>
             </div>
         `;

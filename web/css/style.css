@@ -1157,3 +1157,61 @@ mark {
         grid-template-columns: 1fr;
     }
 }
+
+.delete-btn {
+    background: rgba(239, 68, 68, 0.1);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: var(--accent-danger);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    transform: translateY(-1px);
+}
+
+.delete-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.delete-report-btn {
+    padding: 8px 16px;
+    margin-top: 16px;
+}
+
+.news-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.collapsible-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.timeline-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.timeline-link:hover {
+    text-decoration: none;
+}
