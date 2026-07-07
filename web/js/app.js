@@ -68,10 +68,6 @@ const App = {
                 if (window.location.hash !== `#${route}`) {
                     window.location.hash = route;
                 }
-                const sidebar = document.getElementById('sidebar');
-                const mainContent = document.getElementById('mainContent');
-                sidebar.classList.add('collapsed');
-                mainContent.classList.remove('sidebar-hidden');
             });
         });
     },
