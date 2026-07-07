@@ -20,7 +20,7 @@ const App = {
     
     async loadData() {
         try {
-            const response = await fetch('data/reports.json');
+            const response = await fetch(`data/reports.json?_t=${Date.now()}`);
             if (response.ok) {
                 this.data = await response.json();
             }
