@@ -20,13 +20,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Generate web data
-        run: python generate_web_data.py
+      - name: Deploy with existing web data
+        run: echo "Using pre-generated web data from repository"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
