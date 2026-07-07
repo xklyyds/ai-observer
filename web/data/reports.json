@@ -1,17 +1,991 @@
 {
   "stats": {
-    "totalReports": 10,
-    "totalNews": 50,
-    "latestDate": "2026年07月05日",
+    "totalReports": 12,
+    "totalNews": 84,
+    "latestDate": "2026年07月07日",
     "sources": [
+      "Anthropic",
+      "GitHub",
       "Google DeepMind",
+      "Hacker News",
       "OpenAI",
-      "TechCrunch",
       "Stability AI",
-      "Anthropic"
+      "TechCrunch",
+      "arXiv",
+      "知乎",
+      "量子位"
+    ],
+    "categories": [
+      "AI硬件",
+      "AI讨论",
+      "LLM",
+      "其他",
+      "图像生成",
+      "多模态",
+      "开源项目",
+      "技术新闻",
+      "生物AI"
+    ],
+    "tags": [
+      "AI",
+      "AI代理",
+      "AI搜索",
+      "Diffusion",
+      "GPT",
+      "LLM",
+      "OpenAI",
+      "RAG",
+      "Stable",
+      "WebUI",
+      "代理",
+      "图像",
+      "图像生成",
+      "开源",
+      "推理",
+      "数据框架",
+      "框架",
+      "模型",
+      "研究论文",
+      "程序员",
+      "网页浏览",
+      "职业",
+      "自主",
+      "行业分析",
+      "讨论",
+      "语义搜索",
+      "趋势"
     ]
   },
   "reports": [
+    {
+      "date": "2026-07-07",
+      "displayDate": "2026年07月07日",
+      "generatedAt": "2026-07-07 19:12:58",
+      "newsCount": 29,
+      "news": [
+        {
+          "id": 1,
+          "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+          "source": "OpenAI",
+          "summary": "OpenAI发布GPT-5，推理速度较GPT-4提升300%，在保持高精度的同时实现性能大幅跃升，标志着大模型效率与响应速度的重大突破。",
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "LLM",
+          "tags": [
+            "LLM",
+            "推理",
+            "模型"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+          "source": "Anthropic",
+          "summary": "Anthropic发布Claude 3.5，支持百万token上下文窗口，长文本处理能力显著提升，在复杂任务中表现优异，标志着大模型在超长文本理解领域取得重要突破。",
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "LLM",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+          "source": "Google DeepMind",
+          "summary": "DeepMind新一代AlphaFold在CASP16竞赛中实现蛋白质结构预测准确率99.2%的重大突破，标志着AI在生命科学领域的关键进展。",
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "生物AI",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+          "source": "Stability AI",
+          "summary": "Stability AI发布Stable Diffusion 4，图像细节与一致性显著提升，生成质量再创新高，进一步巩固其在AI图像生成领域的领先地位。",
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "图像生成",
+          "tags": [
+            "图像"
+          ]
+        },
+        {
+          "id": 1,
+          "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+          "source": "TechCrunch",
+          "summary": "NVIDIA、AMD、Intel等厂商竞相发布新一代AI芯片，性能大幅提升，推动AI芯片市场竞争白热化，技术创新加速行业变革。",
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "AI硬件",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
+          "source": "arXiv",
+          "summary": "CamVLA模型实现免标定视角鲁棒视觉-语言-动作策略，通过解耦相机坐标系动作预测与手眼矩阵估计，仅需单目RGB图像即可适应任意相机视角变化，在仿真与真实场景中显著提升成功率。",
+          "link": "http://arxiv.org/abs/2607.05396v1",
+          "author": "Wenhao Li, Xueying Jiang, Quanhao Qian, Deli Zhao, Shijian Lu, Gongjie Zhang, Ran Xu",
+          "category": "其他",
+          "tags": [
+            "模型"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
+          "source": "arXiv",
+          "summary": "该研究提出“教-搜协同训练”框架，解决视觉生成模型因固定训练语料导致的世界知识瓶颈。构建SearchGen-20K基准测试，前沿模型得分仅21-28分，揭示40分性能塌陷。通过发现生成器特有的动态知识边界，实现工具增强的递归自我改进。",
+          "link": "http://arxiv.org/abs/2607.05382v1",
+          "author": "Haozhe Wang, Weijia Feng, Jinpeng Yu, Che Liu, Ping Nie, Fangzhen Lin, Jiaming Liu, Ruihua Huang, Jimmy Lin, Wenhu Chen, Cong Wei",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+          "source": "arXiv",
+          "summary": "提出Direct-OPD方法，通过将弱模型RL训练前后的策略差异作为隐式奖励信号，直接迁移到强模型上，无需显式奖励模型或对强模型进行稀疏奖励RL。实验表明，该方法仅用8块A100在4小时内将Qwen3-1.7B在AIME 2024上的准确率从48.3%提升至62.4%，显著优于直接蒸馏和逐步匹配RL。",
+          "link": "http://arxiv.org/abs/2607.05394v1",
+          "author": "Shiyuan Feng, Huan-ang Gao, Haohan Chi, Hanlin Wu, Zhilong Zhang, Zheng Jiang, Bingxiang He, Wei-Ying Ma, Ya-Qin Zhang, Hao Zhou",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 2,
+          "title": "What Does a Discrete Diffusion Model Learn?",
+          "source": "arXiv",
+          "summary": "离散扩散模型的核心突破：证明负ELBO等于数据熵加路径KL散度，最优解为真实反向跳转率的条件期望。研究揭示去噪器、桥接预测器和分数比三种参数化形式在跳转率层面等价，统一了MDM、SEDD等现有模型，并解释了掩码扩散与均匀扩散的差异。",
+          "link": "http://arxiv.org/abs/2607.05381v1",
+          "author": "Rodrigo Casado Noguerales, Bernhard Schölkopf, Thomas Hofmann, Aran Raoufi",
+          "category": "其他",
+          "tags": [
+            "模型"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "TabPack: Efficient Hyperparameter Ensembles for Tabular Deep Learning",
+          "source": "arXiv",
+          "summary": "TabPack提出高效MLP集成方法，通过单次训练并行采样不同超参数并动态选择成员，大幅降低调参依赖。默认配置即可达到与精细调参方法同等性能，在普通笔记本上比基线在GPU上调参更快，显著减少计算资源消耗。",
+          "link": "http://arxiv.org/abs/2607.05380v1",
+          "author": "Yury Gorishniy, Akim Kotelnikov, Ivan Rubachev, Artem Babenko",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 4,
+          "title": "CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents",
+          "source": "arXiv",
+          "summary": "CompactionRL提出一种结合上下文压缩的强化学习策略，通过令牌级损失归一化和跨轨迹广义优势估计，联合优化任务执行与摘要生成。该方法显著提升长程智能体LLM性能，在SWE-bench Verified和Terminal-Bench 2.0上分别实现7.0和3.1个百分点的绝对增益，并已部署于GLM-5.2模型训练。",
+          "link": "http://arxiv.org/abs/2607.05378v1",
+          "author": "Yujiang Li, Zhenyu Hou, Yi Jing, Jie Tang, Yuxiao Dong",
+          "category": "其他",
+          "tags": [
+            "LLM"
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
+          "source": "arXiv",
+          "summary": "该研究提出一种无需人工标注的深度学习框架，通过模拟瞬变注入与污染数据训练双网络模型，实现实时真伪分类。创新采用非对称协同教学处理噪声标签，并开发低成本混合不确定性量化方法，在严重类别污染下仍保持鲁棒性，为未来巡天项目提供可扩展方案。",
+          "link": "http://arxiv.org/abs/2607.05393v1",
+          "author": "Raphaël Bonnet-Guerrini, Bruno Sanchez, Dominique Fouchez, Benjamin Racine, Maya Guy, Mariam Sabalbal, Manal Yassine, Vincenzo Piuri",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+          "source": "arXiv",
+          "summary": "LLM-as-a-Verifier提出一种无需额外训练的通用验证框架，通过连续评分概率分布实现细粒度反馈，在多项基准测试中取得SOTA性能（如SWE-Bench 78.2%），并支持RL样本效率提升。",
+          "link": "http://arxiv.org/abs/2607.05391v1",
+          "author": "Jacky Kwok, Shulu Li, Pranav Atreya, Yuejiang Liu, Yixing Jiang, Chelsea Finn, Marco Pavone, Ion Stoica, Azalia Mirhoseini",
+          "category": "其他",
+          "tags": [
+            "LLM"
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
+          "source": "arXiv",
+          "summary": "Cortex提出双向对齐具身智能框架，通过32种标准技能原语和可执行规划接口，弥合高层语义与底层执行间隙。基于4千小时视频数据微调，在Libero-long和RoboTwin任务上分别提升3.1%和4.1%，实现零样本完成多阶段化学实验等长程操作任务。",
+          "link": "http://arxiv.org/abs/2607.05377v1",
+          "author": "Jiaqi Peng, Xiqian Yu, Delin Feng, Yuqiang Yang, Wenzhe Cai, Jing Xiong, Ganlin Yang, Jinliang Zheng, Jiafei Cao, Xueyuan Wei, Jiangmiao Pang, Yuan Shen, Tai Wang",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "Fitted Occupancy-Ratio Evaluation without Bellman Completeness",
+          "source": "arXiv",
+          "summary": "提出FORE方法，通过伴随贝尔曼递归拟合折扣占用率，仅需占用率可实现性即可进行离线策略评估，无需贝尔曼完备性。该方法在KL散度下收缩，支持直接价值估计与双重稳健估计，显著降低理论假设要求。",
+          "link": "http://arxiv.org/abs/2607.05375v1",
+          "author": "Lars van der Laan, Nathan Kallus",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "LlamaIndex: 数据增强的LLM应用框架",
+          "source": "GitHub",
+          "summary": "LlamaIndex开源框架发布，为LLM应用提供数据连接与增强功能，支持多数据源接入，显著提升大模型在复杂场景下的数据利用效率与实用性。",
+          "link": "https://github.com/run-llama/llama_index",
+          "author": "",
+          "category": "开源项目",
+          "tags": [
+            "LLM",
+            "数据框架",
+            "RAG"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "LangChain: 构建LLM应用的工具包",
+          "source": "GitHub",
+          "summary": "LangChain推出LLM应用开发框架，支持链与代理等核心模式，简化语言模型驱动的应用构建流程，显著提升开发效率与灵活性。",
+          "link": "https://github.com/langchain-ai/langchain",
+          "author": "",
+          "category": "开源项目",
+          "tags": [
+            "LLM",
+            "框架",
+            "代理"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Stable Diffusion WebUI: 图像生成工具",
+          "source": "GitHub",
+          "summary": "Stable Diffusion WebUI发布，提供基于Stable Diffusion的图形化界面，支持丰富的图像生成功能，降低了AI绘画门槛，提升了创作效率与可访问性。",
+          "link": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+          "author": "",
+          "category": "开源项目",
+          "tags": [
+            "图像生成",
+            "WebUI",
+            "Stable",
+            "Diffusion"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "刚刚，首个空间原生的具身视觉基模开源！机器人更会看我们的世界了",
+          "source": "量子位",
+          "summary": "首个空间原生具身视觉基模开源，突破机器人对三维空间的理解能力，使其能更精准感知人类世界环境，推动具身智能技术发展。",
+          "link": "https://www.qbitai.com/2026/07/445230.html",
+          "author": "",
+          "category": "开源项目",
+          "tags": [
+            "开源"
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Show HN: An AI-powered search engine for research papers",
+          "source": "Hacker News",
+          "summary": "一款AI驱动的科研论文搜索引擎上线，支持语义搜索，突破传统关键词匹配局限，可精准理解用户查询意图，显著提升学术文献检索效率与相关性。",
+          "link": "https://news.ycombinator.com/item?id=39001234",
+          "author": "",
+          "category": "技术新闻",
+          "tags": [
+            "AI搜索",
+            "研究论文",
+            "语义搜索"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "OpenAI releases new model with improved reasoning",
+          "source": "Hacker News",
+          "summary": "OpenAI发布新模型，推理能力显著提升，在复杂逻辑与多步推理任务中表现更优。该突破增强了AI的决策可靠性，为高级应用奠定基础。",
+          "link": "https://news.ycombinator.com/item?id=39001123",
+          "author": "",
+          "category": "技术新闻",
+          "tags": [
+            "OpenAI",
+            "推理",
+            "模型"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Building AI agents that can browse the web autonomously",
+          "source": "Hacker News",
+          "summary": "研究人员成功构建可自主浏览网页的AI代理系统，实现无需人工干预的网页导航与信息提取，突破传统AI依赖预设规则的限制，显著提升自动化任务处理能力。",
+          "link": "https://news.ycombinator.com/item?id=39001098",
+          "author": "",
+          "category": "技术新闻",
+          "tags": [
+            "AI代理",
+            "网页浏览",
+            "自主"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "机器人视觉迎来新突破！蚂蚁灵波空间感知模型LingBot-Depth 2.0正式发布",
+          "source": "量子位",
+          "summary": "蚂蚁灵波发布空间感知模型LingBot-Depth 2.0，实现机器人视觉新突破，显著提升深度感知精度与场景理解能力，为机器人自主导航与交互提供核心技术支撑。",
+          "link": "https://www.qbitai.com/2026/07/445184.html",
+          "author": "",
+          "category": "技术新闻",
+          "tags": [
+            "模型"
+          ]
+        },
+        {
+          "id": 1,
+          "title": "从共识到非共识：科技有「联想」沙龙首场活动直击具身智能产业化“三大困惑”",
+          "source": "量子位",
+          "summary": "科技「联想」沙龙首场活动聚焦具身智能产业化，揭示“三大困惑”：从共识到非共识的路径挑战。核心突破在于探索技术落地与商业化的创新平衡，推动行业影响力提升。",
+          "link": "https://www.qbitai.com/2026/07/445443.html",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 2,
+          "title": "我宣布这是中国最神奇的造车新势力",
+          "source": "量子位",
+          "summary": "中国造车新势力实现核心技术突破，推出创新性智能驾驶与电池技术，显著提升车辆性能与用户体验，展现行业领先影响力。",
+          "link": "https://www.qbitai.com/2026/07/445292.html",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "让Skill“有图可依”：openJiuwen首发多模态Skill范式Skill-Omni",
+          "source": "量子位",
+          "summary": "openJiuwen发布多模态Skill范式Skill-Omni，实现技能“有图可依”。该技术突破传统单一模态限制，融合视觉与语言理解，显著提升AI在复杂场景下的任务执行能力与泛化性。",
+          "link": "https://www.qbitai.com/2026/07/445229.html",
+          "author": "",
+          "category": "多模态",
+          "tags": []
+        },
+        {
+          "id": 1,
+          "title": "如何评价OpenAI最新发布的GPT-5模型？",
+          "source": "知乎",
+          "summary": "OpenAI发布GPT-5，在多模态理解、推理能力和长文本处理上实现重大突破，性能显著超越前代，标志着通用人工智能迈向新高度。",
+          "link": "https://www.zhihu.com/question/123456789",
+          "author": "",
+          "category": "AI讨论",
+          "tags": [
+            "GPT",
+            "OpenAI",
+            "讨论"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "2024年AI行业发展趋势是什么？",
+          "source": "知乎",
+          "summary": "2024年AI行业将聚焦多模态大模型、边缘计算与生成式AI的深度融合，推动自动化决策与个性化服务突破，加速医疗、金融等领域智能化转型。",
+          "link": "https://www.zhihu.com/question/123456790",
+          "author": "",
+          "category": "AI讨论",
+          "tags": [
+            "趋势",
+            "行业分析"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "AI大模型会取代程序员吗？",
+          "source": "知乎",
+          "summary": "AI大模型正深刻影响编程行业，虽能辅助代码生成与调试，但短期内无法完全取代程序员。其核心突破在于提升开发效率，未来程序员需转向更高阶的架构设计与创新工作。",
+          "link": "https://www.zhihu.com/question/123456791",
+          "author": "",
+          "category": "AI讨论",
+          "tags": [
+            "职业",
+            "程序员",
+            "AI"
+          ]
+        }
+      ],
+      "categories": {
+        "LLM": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI发布GPT-5，推理速度较GPT-4提升300%，在保持高精度的同时实现性能大幅跃升，标志着大模型效率与响应速度的重大突破。",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "LLM",
+            "tags": [
+              "LLM",
+              "推理",
+              "模型"
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Anthropic发布Claude 3.5，支持百万token上下文窗口，长文本处理能力显著提升，在复杂任务中表现优异，标志着大模型在超长文本理解领域取得重要突破。",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "LLM",
+            "tags": []
+          }
+        ],
+        "生物AI": [
+          {
+            "id": 1,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "DeepMind新一代AlphaFold在CASP16竞赛中实现蛋白质结构预测准确率99.2%的重大突破，标志着AI在生命科学领域的关键进展。",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "生物AI",
+            "tags": []
+          }
+        ],
+        "图像生成": [
+          {
+            "id": 1,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI发布Stable Diffusion 4，图像细节与一致性显著提升，生成质量再创新高，进一步巩固其在AI图像生成领域的领先地位。",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "图像生成",
+            "tags": [
+              "图像"
+            ]
+          }
+        ],
+        "AI硬件": [
+          {
+            "id": 1,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商竞相发布新一代AI芯片，性能大幅提升，推动AI芯片市场竞争白热化，技术创新加速行业变革。",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "AI硬件",
+            "tags": []
+          }
+        ],
+        "其他": [
+          {
+            "id": 1,
+            "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
+            "source": "arXiv",
+            "summary": "CamVLA模型实现免标定视角鲁棒视觉-语言-动作策略，通过解耦相机坐标系动作预测与手眼矩阵估计，仅需单目RGB图像即可适应任意相机视角变化，在仿真与真实场景中显著提升成功率。",
+            "link": "http://arxiv.org/abs/2607.05396v1",
+            "author": "Wenhao Li, Xueying Jiang, Quanhao Qian, Deli Zhao, Shijian Lu, Gongjie Zhang, Ran Xu",
+            "category": "其他",
+            "tags": [
+              "模型"
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
+            "source": "arXiv",
+            "summary": "该研究提出“教-搜协同训练”框架，解决视觉生成模型因固定训练语料导致的世界知识瓶颈。构建SearchGen-20K基准测试，前沿模型得分仅21-28分，揭示40分性能塌陷。通过发现生成器特有的动态知识边界，实现工具增强的递归自我改进。",
+            "link": "http://arxiv.org/abs/2607.05382v1",
+            "author": "Haozhe Wang, Weijia Feng, Jinpeng Yu, Che Liu, Ping Nie, Fangzhen Lin, Jiaming Liu, Ruihua Huang, Jimmy Lin, Wenhu Chen, Cong Wei",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 1,
+            "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+            "source": "arXiv",
+            "summary": "提出Direct-OPD方法，通过将弱模型RL训练前后的策略差异作为隐式奖励信号，直接迁移到强模型上，无需显式奖励模型或对强模型进行稀疏奖励RL。实验表明，该方法仅用8块A100在4小时内将Qwen3-1.7B在AIME 2024上的准确率从48.3%提升至62.4%，显著优于直接蒸馏和逐步匹配RL。",
+            "link": "http://arxiv.org/abs/2607.05394v1",
+            "author": "Shiyuan Feng, Huan-ang Gao, Haohan Chi, Hanlin Wu, Zhilong Zhang, Zheng Jiang, Bingxiang He, Wei-Ying Ma, Ya-Qin Zhang, Hao Zhou",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "What Does a Discrete Diffusion Model Learn?",
+            "source": "arXiv",
+            "summary": "离散扩散模型的核心突破：证明负ELBO等于数据熵加路径KL散度，最优解为真实反向跳转率的条件期望。研究揭示去噪器、桥接预测器和分数比三种参数化形式在跳转率层面等价，统一了MDM、SEDD等现有模型，并解释了掩码扩散与均匀扩散的差异。",
+            "link": "http://arxiv.org/abs/2607.05381v1",
+            "author": "Rodrigo Casado Noguerales, Bernhard Schölkopf, Thomas Hofmann, Aran Raoufi",
+            "category": "其他",
+            "tags": [
+              "模型"
+            ]
+          },
+          {
+            "id": 3,
+            "title": "TabPack: Efficient Hyperparameter Ensembles for Tabular Deep Learning",
+            "source": "arXiv",
+            "summary": "TabPack提出高效MLP集成方法，通过单次训练并行采样不同超参数并动态选择成员，大幅降低调参依赖。默认配置即可达到与精细调参方法同等性能，在普通笔记本上比基线在GPU上调参更快，显著减少计算资源消耗。",
+            "link": "http://arxiv.org/abs/2607.05380v1",
+            "author": "Yury Gorishniy, Akim Kotelnikov, Ivan Rubachev, Artem Babenko",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents",
+            "source": "arXiv",
+            "summary": "CompactionRL提出一种结合上下文压缩的强化学习策略，通过令牌级损失归一化和跨轨迹广义优势估计，联合优化任务执行与摘要生成。该方法显著提升长程智能体LLM性能，在SWE-bench Verified和Terminal-Bench 2.0上分别实现7.0和3.1个百分点的绝对增益，并已部署于GLM-5.2模型训练。",
+            "link": "http://arxiv.org/abs/2607.05378v1",
+            "author": "Yujiang Li, Zhenyu Hou, Yi Jing, Jie Tang, Yuxiao Dong",
+            "category": "其他",
+            "tags": [
+              "LLM"
+            ]
+          },
+          {
+            "id": 1,
+            "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
+            "source": "arXiv",
+            "summary": "该研究提出一种无需人工标注的深度学习框架，通过模拟瞬变注入与污染数据训练双网络模型，实现实时真伪分类。创新采用非对称协同教学处理噪声标签，并开发低成本混合不确定性量化方法，在严重类别污染下仍保持鲁棒性，为未来巡天项目提供可扩展方案。",
+            "link": "http://arxiv.org/abs/2607.05393v1",
+            "author": "Raphaël Bonnet-Guerrini, Bruno Sanchez, Dominique Fouchez, Benjamin Racine, Maya Guy, Mariam Sabalbal, Manal Yassine, Vincenzo Piuri",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 1,
+            "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+            "source": "arXiv",
+            "summary": "LLM-as-a-Verifier提出一种无需额外训练的通用验证框架，通过连续评分概率分布实现细粒度反馈，在多项基准测试中取得SOTA性能（如SWE-Bench 78.2%），并支持RL样本效率提升。",
+            "link": "http://arxiv.org/abs/2607.05391v1",
+            "author": "Jacky Kwok, Shulu Li, Pranav Atreya, Yuejiang Liu, Yixing Jiang, Chelsea Finn, Marco Pavone, Ion Stoica, Azalia Mirhoseini",
+            "category": "其他",
+            "tags": [
+              "LLM"
+            ]
+          },
+          {
+            "id": 1,
+            "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
+            "source": "arXiv",
+            "summary": "Cortex提出双向对齐具身智能框架，通过32种标准技能原语和可执行规划接口，弥合高层语义与底层执行间隙。基于4千小时视频数据微调，在Libero-long和RoboTwin任务上分别提升3.1%和4.1%，实现零样本完成多阶段化学实验等长程操作任务。",
+            "link": "http://arxiv.org/abs/2607.05377v1",
+            "author": "Jiaqi Peng, Xiqian Yu, Delin Feng, Yuqiang Yang, Wenzhe Cai, Jing Xiong, Ganlin Yang, Jinliang Zheng, Jiafei Cao, Xueyuan Wei, Jiangmiao Pang, Yuan Shen, Tai Wang",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 1,
+            "title": "Fitted Occupancy-Ratio Evaluation without Bellman Completeness",
+            "source": "arXiv",
+            "summary": "提出FORE方法，通过伴随贝尔曼递归拟合折扣占用率，仅需占用率可实现性即可进行离线策略评估，无需贝尔曼完备性。该方法在KL散度下收缩，支持直接价值估计与双重稳健估计，显著降低理论假设要求。",
+            "link": "http://arxiv.org/abs/2607.05375v1",
+            "author": "Lars van der Laan, Nathan Kallus",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 1,
+            "title": "从共识到非共识：科技有「联想」沙龙首场活动直击具身智能产业化“三大困惑”",
+            "source": "量子位",
+            "summary": "科技「联想」沙龙首场活动聚焦具身智能产业化，揭示“三大困惑”：从共识到非共识的路径挑战。核心突破在于探索技术落地与商业化的创新平衡，推动行业影响力提升。",
+            "link": "https://www.qbitai.com/2026/07/445443.html",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "我宣布这是中国最神奇的造车新势力",
+            "source": "量子位",
+            "summary": "中国造车新势力实现核心技术突破，推出创新性智能驾驶与电池技术，显著提升车辆性能与用户体验，展现行业领先影响力。",
+            "link": "https://www.qbitai.com/2026/07/445292.html",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ],
+        "开源项目": [
+          {
+            "id": 1,
+            "title": "LlamaIndex: 数据增强的LLM应用框架",
+            "source": "GitHub",
+            "summary": "LlamaIndex开源框架发布，为LLM应用提供数据连接与增强功能，支持多数据源接入，显著提升大模型在复杂场景下的数据利用效率与实用性。",
+            "link": "https://github.com/run-llama/llama_index",
+            "author": "",
+            "category": "开源项目",
+            "tags": [
+              "LLM",
+              "数据框架",
+              "RAG"
+            ]
+          },
+          {
+            "id": 2,
+            "title": "LangChain: 构建LLM应用的工具包",
+            "source": "GitHub",
+            "summary": "LangChain推出LLM应用开发框架，支持链与代理等核心模式，简化语言模型驱动的应用构建流程，显著提升开发效率与灵活性。",
+            "link": "https://github.com/langchain-ai/langchain",
+            "author": "",
+            "category": "开源项目",
+            "tags": [
+              "LLM",
+              "框架",
+              "代理"
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Stable Diffusion WebUI: 图像生成工具",
+            "source": "GitHub",
+            "summary": "Stable Diffusion WebUI发布，提供基于Stable Diffusion的图形化界面，支持丰富的图像生成功能，降低了AI绘画门槛，提升了创作效率与可访问性。",
+            "link": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+            "author": "",
+            "category": "开源项目",
+            "tags": [
+              "图像生成",
+              "WebUI",
+              "Stable",
+              "Diffusion"
+            ]
+          },
+          {
+            "id": 4,
+            "title": "刚刚，首个空间原生的具身视觉基模开源！机器人更会看我们的世界了",
+            "source": "量子位",
+            "summary": "首个空间原生具身视觉基模开源，突破机器人对三维空间的理解能力，使其能更精准感知人类世界环境，推动具身智能技术发展。",
+            "link": "https://www.qbitai.com/2026/07/445230.html",
+            "author": "",
+            "category": "开源项目",
+            "tags": [
+              "开源"
+            ]
+          }
+        ],
+        "技术新闻": [
+          {
+            "id": 1,
+            "title": "Show HN: An AI-powered search engine for research papers",
+            "source": "Hacker News",
+            "summary": "一款AI驱动的科研论文搜索引擎上线，支持语义搜索，突破传统关键词匹配局限，可精准理解用户查询意图，显著提升学术文献检索效率与相关性。",
+            "link": "https://news.ycombinator.com/item?id=39001234",
+            "author": "",
+            "category": "技术新闻",
+            "tags": [
+              "AI搜索",
+              "研究论文",
+              "语义搜索"
+            ]
+          },
+          {
+            "id": 2,
+            "title": "OpenAI releases new model with improved reasoning",
+            "source": "Hacker News",
+            "summary": "OpenAI发布新模型，推理能力显著提升，在复杂逻辑与多步推理任务中表现更优。该突破增强了AI的决策可靠性，为高级应用奠定基础。",
+            "link": "https://news.ycombinator.com/item?id=39001123",
+            "author": "",
+            "category": "技术新闻",
+            "tags": [
+              "OpenAI",
+              "推理",
+              "模型"
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Building AI agents that can browse the web autonomously",
+            "source": "Hacker News",
+            "summary": "研究人员成功构建可自主浏览网页的AI代理系统，实现无需人工干预的网页导航与信息提取，突破传统AI依赖预设规则的限制，显著提升自动化任务处理能力。",
+            "link": "https://news.ycombinator.com/item?id=39001098",
+            "author": "",
+            "category": "技术新闻",
+            "tags": [
+              "AI代理",
+              "网页浏览",
+              "自主"
+            ]
+          },
+          {
+            "id": 4,
+            "title": "机器人视觉迎来新突破！蚂蚁灵波空间感知模型LingBot-Depth 2.0正式发布",
+            "source": "量子位",
+            "summary": "蚂蚁灵波发布空间感知模型LingBot-Depth 2.0，实现机器人视觉新突破，显著提升深度感知精度与场景理解能力，为机器人自主导航与交互提供核心技术支撑。",
+            "link": "https://www.qbitai.com/2026/07/445184.html",
+            "author": "",
+            "category": "技术新闻",
+            "tags": [
+              "模型"
+            ]
+          }
+        ],
+        "多模态": [
+          {
+            "id": 1,
+            "title": "让Skill“有图可依”：openJiuwen首发多模态Skill范式Skill-Omni",
+            "source": "量子位",
+            "summary": "openJiuwen发布多模态Skill范式Skill-Omni，实现技能“有图可依”。该技术突破传统单一模态限制，融合视觉与语言理解，显著提升AI在复杂场景下的任务执行能力与泛化性。",
+            "link": "https://www.qbitai.com/2026/07/445229.html",
+            "author": "",
+            "category": "多模态",
+            "tags": []
+          }
+        ],
+        "AI讨论": [
+          {
+            "id": 1,
+            "title": "如何评价OpenAI最新发布的GPT-5模型？",
+            "source": "知乎",
+            "summary": "OpenAI发布GPT-5，在多模态理解、推理能力和长文本处理上实现重大突破，性能显著超越前代，标志着通用人工智能迈向新高度。",
+            "link": "https://www.zhihu.com/question/123456789",
+            "author": "",
+            "category": "AI讨论",
+            "tags": [
+              "GPT",
+              "OpenAI",
+              "讨论"
+            ]
+          },
+          {
+            "id": 2,
+            "title": "2024年AI行业发展趋势是什么？",
+            "source": "知乎",
+            "summary": "2024年AI行业将聚焦多模态大模型、边缘计算与生成式AI的深度融合，推动自动化决策与个性化服务突破，加速医疗、金融等领域智能化转型。",
+            "link": "https://www.zhihu.com/question/123456790",
+            "author": "",
+            "category": "AI讨论",
+            "tags": [
+              "趋势",
+              "行业分析"
+            ]
+          },
+          {
+            "id": 3,
+            "title": "AI大模型会取代程序员吗？",
+            "source": "知乎",
+            "summary": "AI大模型正深刻影响编程行业，虽能辅助代码生成与调试，但短期内无法完全取代程序员。其核心突破在于提升开发效率，未来程序员需转向更高阶的架构设计与创新工作。",
+            "link": "https://www.zhihu.com/question/123456791",
+            "author": "",
+            "category": "AI讨论",
+            "tags": [
+              "职业",
+              "程序员",
+              "AI"
+            ]
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [
+          {
+            "name": "开源项目",
+            "count": 4
+          },
+          {
+            "name": "技术新闻",
+            "count": 4
+          },
+          {
+            "name": "AI讨论",
+            "count": 3
+          },
+          {
+            "name": "LLM",
+            "count": 2
+          },
+          {
+            "name": "#LLM",
+            "count": 5
+          },
+          {
+            "name": "#模型",
+            "count": 5
+          },
+          {
+            "name": "#推理",
+            "count": 2
+          },
+          {
+            "name": "#OpenAI",
+            "count": 2
+          },
+          {
+            "name": "#图像",
+            "count": 1
+          },
+          {
+            "name": "arXiv",
+            "count": 10
+          },
+          {
+            "name": "量子位",
+            "count": 5
+          },
+          {
+            "name": "GitHub",
+            "count": 3
+          }
+        ],
+        "topTags": [
+          {
+            "name": "LLM",
+            "count": 5
+          },
+          {
+            "name": "模型",
+            "count": 5
+          },
+          {
+            "name": "推理",
+            "count": 2
+          },
+          {
+            "name": "OpenAI",
+            "count": 2
+          },
+          {
+            "name": "图像",
+            "count": 1
+          }
+        ],
+        "topSources": [
+          {
+            "name": "cs.LG\" scheme=\"http://arxiv.org/schemas/atom",
+            "count": 4
+          },
+          {
+            "name": "#OpenAI",
+            "count": 2
+          },
+          {
+            "name": "arXiv",
+            "count": 10
+          },
+          {
+            "name": "量子位",
+            "count": 5
+          },
+          {
+            "name": "GitHub",
+            "count": 3
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "displayDate": "2026年07月06日",
+      "generatedAt": "2026-07-06 20:00:01",
+      "newsCount": 5,
+      "news": [
+        {
+          "id": 1,
+          "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+          "source": "OpenAI",
+          "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 2,
+          "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+          "source": "Google DeepMind",
+          "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 3,
+          "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+          "source": "Anthropic",
+          "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 4,
+          "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+          "source": "Stability AI",
+          "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        },
+        {
+          "id": 5,
+          "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+          "source": "TechCrunch",
+          "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
+        }
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
+    },
     {
       "date": "2026-07-05",
       "displayDate": "2026年07月05日",
@@ -23,37 +997,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-07-04",
@@ -66,37 +1114,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-07-03",
@@ -109,37 +1231,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-07-02",
@@ -152,37 +1348,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-07-01",
@@ -195,37 +1465,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-06-30",
@@ -238,37 +1582,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-06-29",
@@ -281,37 +1699,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-06-28",
@@ -324,37 +1816,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-06-27",
@@ -367,37 +1933,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     },
     {
       "date": "2026-06-25",
@@ -410,37 +2050,111 @@
           "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
           "source": "OpenAI",
           "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
-          "link": "https://openai.com/blog/gpt-5-update"
+          "link": "https://openai.com/blog/gpt-5-update",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 2,
           "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
           "source": "Google DeepMind",
           "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
-          "link": "https://deepmind.google/discover/blog/alphafold-update/"
+          "link": "https://deepmind.google/discover/blog/alphafold-update/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 3,
           "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
           "source": "Anthropic",
           "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
-          "link": "https://www.anthropic.com/index/claude-3-5"
+          "link": "https://www.anthropic.com/index/claude-3-5",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 4,
           "title": "Stable Diffusion 4发布，图像生成质量再创新高",
           "source": "Stability AI",
           "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
-          "link": "https://stability.ai/news/stable-diffusion-4"
+          "link": "https://stability.ai/news/stable-diffusion-4",
+          "author": "",
+          "category": "其他",
+          "tags": []
         },
         {
           "id": 5,
           "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
           "source": "TechCrunch",
           "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
-          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/"
+          "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+          "author": "",
+          "category": "其他",
+          "tags": []
         }
-      ]
+      ],
+      "categories": {
+        "其他": [
+          {
+            "id": 1,
+            "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+            "source": "OpenAI",
+            "summary": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+            "link": "https://openai.com/blog/gpt-5-update",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 2,
+            "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+            "source": "Google DeepMind",
+            "summary": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+            "link": "https://deepmind.google/discover/blog/alphafold-update/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 3,
+            "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+            "source": "Anthropic",
+            "summary": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+            "link": "https://www.anthropic.com/index/claude-3-5",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+            "source": "Stability AI",
+            "summary": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+            "link": "https://stability.ai/news/stable-diffusion-4",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+            "source": "TechCrunch",
+            "summary": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+            "link": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+            "author": "",
+            "category": "其他",
+            "tags": []
+          }
+        ]
+      },
+      "trends": {
+        "topCategories": [],
+        "topTags": [],
+        "topSources": []
+      }
     }
   ]
 }
