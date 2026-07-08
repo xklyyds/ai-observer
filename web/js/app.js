@@ -151,15 +151,22 @@ const App = {
     },
     
     getFilteredReports() {
-        return (this.data?.reports || []).filter(report => {
-            if (this.deletedItems.reports.includes(report.date)) return false;
-            report.news = report.news.filter(news => {
+        return (this.data?.reports || []).map(report => {
+            if (this.deletedItems.reports.includes(report.date)) return null;
+            
+            const filteredNews = report.news.filter(news => {
                 const key = `${report.date}_${news.id}`;
                 return this.deletedItems.news[key] !== true;
             });
-            report.newsCount = report.news.length;
-            return report.news.length > 0;
-        });
+            
+            if (filteredNews.length === 0) return null;
+            
+            return {
+                ...report,
+                news: filteredNews,
+                newsCount: filteredNews.length
+            };
+        }).filter(Boolean);
     },
     
     async init() {
@@ -766,8 +773,7 @@ const App = {
     },
     
     renderReportDetail(date) {
-        const deleted = this.getDeletedItems();
-        if (deleted.reports.includes(date)) {
+        if (this.deletedItems.reports.includes(date)) {
             return `
                 <div class="report-detail">
                     <a href="#/reports" class="back-link">
@@ -790,12 +796,12 @@ const App = {
             return this.renderNotFound();
         }
         
-        report.news = report.news.filter(news => {
+        const filteredNews = report.news.filter(news => {
             const key = `${date}_${news.id}`;
-            return deleted.news[key] !== true;
+            return this.deletedItems.news[key] !== true;
         });
         
-        const categories = [...new Set(report.news.map(n => n.category))].filter(c => c);
+        const categories = [...new Set(filteredNews.map(n => n.category))].filter(c => c);
         
         return `
             <div class="report-detail">
@@ -830,7 +836,7 @@ const App = {
                 
                 <h2 class="detail-news-title">今日新闻</h2>
                 <div class="news-list">
-                    ${report.news.length > 0 ? report.news.map((news, index) => `
+                    ${filteredNews.length > 0 ? filteredNews.map((news, index) => `
                         <div class="collapsible-card" data-category="${news.category || ''}" data-source="${news.source || ''}">
                             <div class="collapsible-header">
                                 <div class="collapsible-header-left">
