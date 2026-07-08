@@ -60,6 +60,24 @@ def _background_init():
 threading.Thread(target=_background_init, daemon=True).start()
 
 
+# === Daily scheduler: run crawler every 24 hours ===
+def _daily_scheduler():
+    """Run the crawler automatically every 24 hours."""
+    while True:
+        time.sleep(24 * 3600)
+        try:
+            logger.info("Scheduled daily crawl starting...")
+            from crawler import crawl_all_sources, generate_frontend_data
+            result = crawl_all_sources()
+            generate_frontend_data()
+            logger.info(f"Scheduled crawl complete: {result}")
+        except Exception as e:
+            logger.warning(f"Scheduled crawl failed: {e}")
+
+threading.Thread(target=_daily_scheduler, daemon=True).start()
+
+
+
 # === Email Helpers ===
 
 def send_verification_email(recipient_email: str, token: str) -> bool:
