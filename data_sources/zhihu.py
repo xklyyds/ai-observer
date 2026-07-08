@@ -1,4 +1,4 @@
-﻿import urllib.request
+import urllib.request
 import json
 import ssl
 from typing import List
@@ -97,5 +97,18 @@ class ZhihuDataSource(DataSource):
                 category="AI讨论",
                 tags=["职业", "程序员", "AI"]
             )
-        ]
+        
+            NewsItem(title="国产算力芯片百花齐放：寒武纪、地平线、燧原最新进展",
+                     url="https://www.zhihu.com/question/chinese-ai-chips",
+                     description="国内AI芯片企业在推理芯片、自动驾驶芯片、训练芯片三个赛道全面发力。",
+                     source="知乎", category="芯片", tags=["AI芯片", "国产"]),
+            NewsItem(title="如何评价Neuralink第二例人类植入手术的效果？",
+                     url="https://www.zhihu.com/question/neuralink-2nd-implant",
+                     description="从技术细节和临床应用前景分析脑机接口的最新进展和面临的伦理挑战。",
+                     source="知乎", category="生物", tags=["脑机接口", "医疗"]),
+            NewsItem(title="假如给你50万预算，你会做什么方向的AI创业？",
+                     url="https://www.zhihu.com/question/ai-startup-budget",
+                     description="知友热烈讨论AI应用层的创业机会，聚焦垂直行业解决方案和AI+科学方向。",
+                     source="知乎", category="AI", tags=["AI创业", "投资"]),
+]
 

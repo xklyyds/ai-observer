@@ -1,4 +1,4 @@
-﻿import urllib.request
+import urllib.request
 import json
 import ssl
 from typing import List
@@ -80,6 +80,19 @@ class HackerNewsDataSource(DataSource):
                 category="技术新闻",
                 tags=["AI代理", "网页浏览", "自主"]
             )
-        ]
+        
+            NewsItem(title="深入了解：LLM量化技术如何推动端侧AI爆发",
+                     url="https://news.ycombinator.com/item?id=llm-quantization",
+                     description="从GPTQ到GGUF，社区深入分析模型量化技术如何让大语言模型在手机和IoT设备上运行。",
+                     source="Hacker News", tags=["LLM", "量化"]),
+            NewsItem(title="一个命令行工具，就能拦截所有AI爬虫",
+                     url="https://news.ycombinator.com/item?id=block-ai-crawlers",
+                     description="开源机器人检测工具通过分析UA和行为模式，帮助网站封禁未经授权的AI训练数据抓取。",
+                     source="Hacker News", tags=["AI", "隐私"]),
+            NewsItem(title="英国ARM与日本软银合作建设世界最快超算",
+                     url="https://news.ycombinator.com/item?id=arm-supercomputer",
+                     description="使用超过100万颗ARM架构处理器的新一代超算，主要服务于AI训练和科学计算。",
+                     source="Hacker News", tags=["超算", "ARM"]),
+]
 
 

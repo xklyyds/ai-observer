@@ -1,4 +1,4 @@
-import os
+﻿import os
 
 import os
 from pathlib import Path
@@ -37,7 +37,7 @@ DATA_SOURCES_CONFIG = {
         "enabled": True,
         "use_mock": False,
         "categories": ["cs.AI", "cs.LG", "stat.ML", "cs.CV", "cs.CL", "cs.SE", "cs.CR", "cs.NE", "cs.RO", "cs.DC"],
-        "max_results": 20
+        "max_results": 30
     },
     "github": {
         "enabled": True,
@@ -66,17 +66,17 @@ DATA_SOURCES_CONFIG = {
     },
     "nature": {
         "enabled": True,
-        "use_mock": True,
+        "use_mock": False,
         "max_items": 15
     },
     "mit_tech_review": {
         "enabled": True,
-        "use_mock": True,
+        "use_mock": False,
         "max_items": 10
     },
     "biorxiv": {
         "enabled": True,
-        "use_mock": True,
+        "use_mock": False,
         "max_items": 10
     }
 }
@@ -107,3 +107,4 @@ DISTRIBUTORS_CONFIG = {
 
 REPORT_OUTPUT_DIR = "./reports"
 LOG_FILE = "./ai_daily_report.log"
+

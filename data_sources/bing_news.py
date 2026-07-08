@@ -1,4 +1,4 @@
-﻿import os
+import os
 import urllib.request
 import urllib.parse
 import json
@@ -97,4 +97,33 @@ class BingNewsDataSource(DataSource):
                 source="TechCrunch",
                 category="AI硬件"
             )
-        ]
+        
+            NewsItem(title="微软发布Azure Quantum Elements，加速材料科学计算",
+                     url="https://news.microsoft.com/azure-quantum-elements/",
+                     description="微软推出云量子化学平台，帮助科学家加速新材料和化学制品的发现过程。",
+                     source="Microsoft", category="量子计算"),
+            NewsItem(title="全球首款3nm EUV芯片量产，性能提升40%",
+                     url="https://www.anandtech.com/3nm-mass-production",
+                     description="三星和台积电同步进入3nm芯片量产阶段，晶体管密度和能效创历史新高。",
+                     source="AnandTech", category="半导体"),
+            NewsItem(title="RISC-V生态爆发：开源芯片架构在AIoT领域装机量突破100亿",
+                     url="https://www.riscv.org/blog/10-billion-riscv-cores/",
+                     description="RISC-V国际基金会宣布基于开源指令集的芯片出货量突破100亿颗，主要在AIoT市场。",
+                     source="RISC-V", category="芯片"),
+            NewsItem(title="脑机接口新突破：科学家实现意念控制无人机编队飞行",
+                     url="https://www.nature.com/articles/bci-drone-swarm",
+                     description="最新研究实现一人同时操控多架无人机编队，脑机接口信号解码精度达98%。",
+                     source="Nature", category="脑机接口"),
+            NewsItem(title="欧盟通过AI监管法案，成为全球首部全面AI法规",
+                     url="https://ec.europa.eu/ai-act-final/",
+                     description="欧洲议会正式通过AI法案，对高风险AI系统实施严格监管要求，影响全球AI产业格局。",
+                     source="Reuters", category="AI监管"),
+            NewsItem(title="长征十号载人登月火箭发动机试车成功",
+                     url="https://www.cnsa.gov.cn/long-march-10-engine-test/",
+                     description="中国载人登月工程关键动力系统试车圆满完成，为2030年前实现中国人登月奠定基础。",
+                     source="CNSA", category="航天"),
+            NewsItem(title="新型固态电解质研发成功，能量密度提升3倍",
+                     url="https://www.science.org/solid-electrolyte-breakthrough",
+                     description="中国科学院团队研制出新型硫化物固态电解质，全固态锂电池能量密度突破500Wh/kg。",
+                     source="Science", category="新能源"),
+]
