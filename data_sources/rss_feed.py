@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import re
 import ssl
 from typing import List
@@ -27,17 +27,12 @@ class RSSFeedDataSource(DataSource):
     def name(self) -> str:
         return "RSS订阅"
     
-    @property
-    def priority(self) -> int:
-        return 9
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取新闻...")
         all_items = []
         
         ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
         
         for feed_name in self.feeds:
             if feed_name not in self.RSS_FEEDS:
@@ -102,3 +97,5 @@ class RSSFeedDataSource(DataSource):
         text = re.sub(r'&amp;', '&', text)
         text = re.sub(r'\s+', ' ', text)
         return text.strip()
+
+

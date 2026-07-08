@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import urllib.parse
 import json
 import ssl
@@ -20,9 +20,6 @@ class ArXivDataSource(DataSource):
     def name(self) -> str:
         return "arXiv"
     
-    @property
-    def priority(self) -> int:
-        return 5
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取预印本...")
@@ -32,11 +29,11 @@ class ArXivDataSource(DataSource):
         
         try:
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
-            category_query = " OR ".join(self.categories)
+            category_query = " OR ".join(f"cat:{c}" for c in self.categories)
             
             url = "http://export.arxiv.org/api/query"
             params = urllib.parse.urlencode({
-                "search_query": f"cat:{category_query}",
+                "search_query": f"({category_query})",
                 "start": 0,
                 "max_results": self.max_results,
                 "sortBy": "submittedDate",
@@ -45,8 +42,6 @@ class ArXivDataSource(DataSource):
             full_url = f"{url}?{params}"
             
             ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
             
             req = urllib.request.Request(full_url)
             with urllib.request.urlopen(req, context=ctx, timeout=15) as response:
@@ -131,3 +126,5 @@ class ArXivDataSource(DataSource):
                 tags=["基础模型", "训练效率", "优化"]
             )
         ]
+
+

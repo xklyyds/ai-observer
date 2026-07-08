@@ -1,4 +1,4 @@
-import os
+﻿import os
 import json
 import urllib.request
 import urllib.parse
@@ -82,8 +82,6 @@ class AISummarizer(Processor):
         }
         
         ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
         
         req = urllib.request.Request(
             self.llm_config.base_url,
@@ -100,3 +98,5 @@ class AISummarizer(Processor):
         elif "output" in data:
             return data["output"]["text"].strip()
         return ""
+
+

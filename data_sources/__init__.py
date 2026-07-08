@@ -6,6 +6,7 @@ from .hackernews import HackerNewsDataSource
 from .rss_feed import RSSFeedDataSource
 from .zhihu import ZhihuDataSource
 from .tech_media import TechMediaDataSource
+from .nature import NatureDataSource
 from config import DATA_SOURCES_CONFIG
 
 
@@ -17,6 +18,7 @@ DATA_SOURCE_REGISTRY = {
     "rss": RSSFeedDataSource,
     "zhihu": ZhihuDataSource,
     "techmedia": TechMediaDataSource,
+    "nature": NatureDataSource,
 }
 
 
@@ -67,6 +69,12 @@ def get_all_data_sources() -> list:
     if DATA_SOURCES_CONFIG.get("techmedia", {}).get("enabled", True):
         config = DATA_SOURCES_CONFIG["techmedia"]
         sources.append(TechMediaDataSource(max_items=config.get("max_items", 10)))
+    
+    if DATA_SOURCES_CONFIG.get("nature", {}).get("enabled", True):
+        config = DATA_SOURCES_CONFIG["nature"]
+        source = NatureDataSource(max_items=config.get("max_items", 15))
+        source.use_mock = config.get("use_mock", False)
+        sources.append(source)
     
     return sources
 

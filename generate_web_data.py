@@ -59,11 +59,13 @@ def parse_report_file(filepath):
         raw_sources = [{'name': name.strip(), 'count': int(count)} 
                        for name, count in source_pattern.findall(trend_text)]
         
-        valid_sources = ['arXiv', 'GitHub', 'Hacker News', '量子位', '知乎', 'OpenAI', 
-                         'DeepMind', 'Anthropic', 'Stability AI', 'TechCrunch']
+        existing_names = {c['name'] for c in report['trends']['topCategories']}
         report['trends']['topSources'] = [
             s for s in raw_sources 
-            if any(vs.lower() in s['name'].lower() for vs in valid_sources)
+            if s['name'] not in existing_names
+            and not s['name'].startswith('#')
+            and 'scheme' not in s['name']
+            and 'http://' not in s['name']
         ]
 
     clean_content = re.sub(r'<[^>]+>', '', content)

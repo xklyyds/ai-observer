@@ -12,10 +12,12 @@ DISTRIBUTOR_REGISTRY = {
 
 
 def get_all_distributors(email_config: dict = None):
-    distributors = [FileDistributor()]
-    if email_config:
-        distributors.append(EmailDistributor(email_config))
-    distributors.append(TelegramDistributor())
+    distributors = []
+    for name, cls in DISTRIBUTOR_REGISTRY.items():
+        if name == "email" and email_config:
+            distributors.append(cls(email_config))
+        elif name != "email":
+            distributors.append(cls())
     return distributors
 
 

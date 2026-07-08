@@ -1,4 +1,4 @@
-import os
+﻿import os
 import urllib.request
 import urllib.parse
 import json
@@ -19,9 +19,6 @@ class BingNewsDataSource(DataSource):
     def name(self) -> str:
         return "Bing News"
     
-    @property
-    def priority(self) -> int:
-        return 10
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取新闻...")

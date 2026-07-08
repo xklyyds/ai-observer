@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import json
 import ssl
 import re
@@ -17,9 +17,6 @@ class TechMediaDataSource(DataSource):
     def name(self) -> str:
         return "科技媒体"
     
-    @property
-    def priority(self) -> int:
-        return 8
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取新闻...")
@@ -35,8 +32,6 @@ class TechMediaDataSource(DataSource):
         items = []
         try:
             ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
             
             url = "https://36kr.com/api/search-column?searchKey=AI&type=web"
             
@@ -67,8 +62,6 @@ class TechMediaDataSource(DataSource):
         items = []
         try:
             ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
             
             url = "https://api.juejin.cn/search_api/v1/search?keyword=AI&type=article&limit=5"
             
@@ -101,3 +94,5 @@ class TechMediaDataSource(DataSource):
             self.logger.error(f"从掘金获取新闻失败: {str(e)}")
         
         return items
+
+

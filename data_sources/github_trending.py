@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import json
 import ssl
 from typing import List
@@ -18,9 +18,6 @@ class GitHubTrendingDataSource(DataSource):
     def name(self) -> str:
         return "GitHub Trending"
     
-    @property
-    def priority(self) -> int:
-        return 8
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取趋势项目...")
@@ -32,8 +29,6 @@ class GitHubTrendingDataSource(DataSource):
             url = f"https://github-trending-api.now.sh/repositories?language={self.language}&since={self.since}"
             
             ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
             
             req = urllib.request.Request(url)
             req.add_header("User-Agent", "Mozilla/5.0")
@@ -92,3 +87,5 @@ class GitHubTrendingDataSource(DataSource):
                 tags=["图像生成", "WebUI", "Stable Diffusion"]
             )
         ]
+
+

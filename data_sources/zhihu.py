@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import json
 import ssl
 from typing import List
@@ -17,9 +17,6 @@ class ZhihuDataSource(DataSource):
     def name(self) -> str:
         return "知乎热榜"
     
-    @property
-    def priority(self) -> int:
-        return 6
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取热门话题...")
@@ -31,8 +28,6 @@ class ZhihuDataSource(DataSource):
             url = "https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total"
             
             ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
             
             req = urllib.request.Request(url, headers={
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
@@ -49,7 +44,8 @@ class ZhihuDataSource(DataSource):
                 if not title:
                     continue
                 
-                url = f"https://www.zhihu.com/question/{target.get('id', '')}"
+                question_id = target.get('question', {}).get('id') or target.get('id', '')
+                url = f"https://www.zhihu.com/question/{question_id}"
                 excerpt = target.get("excerpt", "") or target.get("question", {}).get("excerpt", "")
                 author = target.get("author", {}).get("name", "")
                 
@@ -102,3 +98,4 @@ class ZhihuDataSource(DataSource):
                 tags=["职业", "程序员", "AI"]
             )
         ]
+

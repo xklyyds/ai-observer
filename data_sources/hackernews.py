@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import json
 import ssl
 from typing import List
@@ -17,9 +17,6 @@ class HackerNewsDataSource(DataSource):
     def name(self) -> str:
         return "Hacker News"
     
-    @property
-    def priority(self) -> int:
-        return 7
     
     def fetch(self) -> List[NewsItem]:
         self.logger.info(f"开始从 {self.name} 获取热门话题...")
@@ -29,8 +26,6 @@ class HackerNewsDataSource(DataSource):
         
         try:
             ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
             
             top_stories_url = "https://hacker-news.firebaseio.com/v0/topstories.json"
             req = urllib.request.Request(top_stories_url)
@@ -86,3 +81,5 @@ class HackerNewsDataSource(DataSource):
                 tags=["AI代理", "网页浏览", "自主"]
             )
         ]
+
+

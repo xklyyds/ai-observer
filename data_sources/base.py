@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+﻿from abc import ABC, abstractmethod
 from typing import List, Dict
 
 
@@ -38,7 +38,3 @@ class DataSource(ABC):
     def name(self) -> str:
         pass
     
-    @property
-    @abstractmethod
-    def priority(self) -> int:
-        pass
