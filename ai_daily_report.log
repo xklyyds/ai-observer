@@ -274,3 +274,116 @@
 2026-07-06 20:00:01,480 - INFO - 开始发送邮件...
 2026-07-06 20:00:03,064 - INFO - 邮件发送成功
 2026-07-06 20:00:03,064 - INFO - 日报任务执行完成
+2026-07-07 17:47:40,002 - AIObserver - INFO - ============================================================
+2026-07-07 17:47:40,003 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 17:47:40,003 - AIObserver - INFO - ============================================================
+2026-07-07 17:47:40,003 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 17:47:40,003 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 17:47:40,536 - AIObserver - INFO - 从 arXiv 获取到 3 条新闻
+2026-07-07 17:48:02,088 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 17:52:02,068 - AIObserver - INFO - 从 Hacker News 获取到 9 条新闻
+2026-07-07 17:52:02,068 - AIObserver - INFO - 共获取到 20 条新闻
+2026-07-07 17:52:02,068 - AIObserver - INFO - 开始处理新闻...
+2026-07-07 17:52:02,068 - AIObserver - INFO - NewsCategorizer 处理完成
+2026-07-07 17:52:02,068 - AIObserver - INFO - AISummarizer 处理完成
+2026-07-07 17:52:02,090 - AIObserver - INFO - TrendAnalyzer 处理完成
+2026-07-07 17:52:02,090 - AIObserver - INFO - 开始生成日报...
+2026-07-07 17:52:02,090 - AIObserver - INFO - 日报生成完成
+2026-07-07 17:52:02,091 - AIObserver - INFO - 开始分发日报...
+2026-07-07 17:52:02,092 - AIObserver - INFO - File 分发成功
+2026-07-07 17:52:03,384 - AIObserver - INFO - Email 分发成功
+2026-07-07 17:52:03,384 - AIObserver - INFO - Telegram 分发成功
+2026-07-07 17:52:03,384 - AIObserver - INFO - 日报任务执行完成
+2026-07-07 18:17:11,770 - AIObserver - INFO - ============================================================
+2026-07-07 18:17:11,770 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 18:17:11,771 - AIObserver - INFO - ============================================================
+2026-07-07 18:17:11,771 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 18:17:11,771 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 18:17:12,139 - AIObserver - INFO - 从 arXiv 获取到 3 条新闻
+2026-07-07 18:17:33,658 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 18:25:25,013 - AIObserver - INFO - 从 Hacker News 获取到 9 条新闻
+2026-07-07 18:25:25,013 - AIObserver - INFO - 共获取到 20 条新闻
+2026-07-07 18:25:25,013 - AIObserver - INFO - 开始处理新闻...
+2026-07-07 18:25:25,014 - AIObserver - INFO - NewsCategorizer 处理完成
+2026-07-07 18:25:35,326 - AIObserver - INFO - AISummarizer 处理完成
+2026-07-07 18:25:35,328 - AIObserver - INFO - TrendAnalyzer 处理完成
+2026-07-07 18:25:35,328 - AIObserver - INFO - 开始生成日报...
+2026-07-07 18:25:35,328 - AIObserver - INFO - 日报生成完成
+2026-07-07 18:25:35,329 - AIObserver - INFO - 开始分发日报...
+2026-07-07 18:25:35,331 - AIObserver - INFO - File 分发成功
+2026-07-07 18:25:36,237 - AIObserver - INFO - Email 分发成功
+2026-07-07 18:25:36,238 - AIObserver - INFO - Telegram 分发成功
+2026-07-07 18:25:36,238 - AIObserver - INFO - 日报任务执行完成
+2026-07-07 18:50:40,379 - AIObserver - INFO - ============================================================
+2026-07-07 18:50:40,379 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 18:50:40,379 - AIObserver - INFO - ============================================================
+2026-07-07 18:50:40,379 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 18:50:40,380 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 18:50:40,798 - AIObserver - INFO - 从 arXiv 获取到 3 条新闻
+2026-07-07 18:51:02,303 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 18:56:00,040 - AIObserver - INFO - ============================================================
+2026-07-07 18:56:00,040 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 18:56:00,041 - AIObserver - INFO - ============================================================
+2026-07-07 18:56:00,041 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 18:56:00,042 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 18:56:00,428 - AIObserver - INFO - 从 arXiv 获取到 3 条新闻
+2026-07-07 18:56:29,697 - AIObserver - INFO - ============================================================
+2026-07-07 18:56:29,698 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 18:56:29,698 - AIObserver - INFO - ============================================================
+2026-07-07 18:56:29,698 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 18:56:29,699 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 18:56:36,177 - AIObserver - INFO - 从 arXiv 获取到 3 条新闻
+2026-07-07 18:56:42,927 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 18:57:10,248 - AIObserver - INFO - 从 Hacker News 获取到 3 条新闻
+2026-07-07 18:57:26,812 - AIObserver - INFO - 从 RSS订阅 获取到 5 条新闻
+2026-07-07 18:57:26,926 - AIObserver - INFO - 从 知乎热榜 获取到 3 条新闻
+2026-07-07 18:57:27,522 - AIObserver - INFO - 从 科技媒体 获取到 0 条新闻
+2026-07-07 18:57:27,522 - AIObserver - INFO - 共获取到 22 条新闻
+2026-07-07 18:57:27,522 - AIObserver - INFO - 开始处理新闻...
+2026-07-07 18:57:27,525 - AIObserver - INFO - NewsCategorizer 处理完成
+2026-07-07 18:57:38,185 - AIObserver - INFO - AISummarizer 处理完成
+2026-07-07 18:57:38,187 - AIObserver - INFO - TrendAnalyzer 处理完成
+2026-07-07 18:57:38,187 - AIObserver - INFO - 开始生成日报...
+2026-07-07 18:57:38,188 - AIObserver - INFO - 日报生成完成
+2026-07-07 18:57:38,188 - AIObserver - INFO - 开始分发日报...
+2026-07-07 18:57:38,189 - AIObserver - INFO - File 分发成功
+2026-07-07 18:57:40,191 - AIObserver - INFO - Email 分发成功
+2026-07-07 18:57:40,192 - AIObserver - INFO - Telegram 分发成功
+2026-07-07 18:57:40,192 - AIObserver - INFO - 日报任务执行完成
+2026-07-07 19:05:46,254 - AIObserver - INFO - ============================================================
+2026-07-07 19:05:46,254 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 19:05:46,254 - AIObserver - INFO - ============================================================
+2026-07-07 19:05:46,255 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 19:05:46,255 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 19:05:47,541 - AIObserver - INFO - 从 arXiv 获取到 10 条新闻
+2026-07-07 19:06:03,266 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 19:09:20,684 - AIObserver - INFO - ============================================================
+2026-07-07 19:09:20,684 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 19:09:20,684 - AIObserver - INFO - ============================================================
+2026-07-07 19:09:20,684 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 19:09:20,685 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 19:09:21,244 - AIObserver - INFO - 从 arXiv 获取到 10 条新闻
+2026-07-07 19:09:36,563 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 19:12:06,600 - AIObserver - INFO - ============================================================
+2026-07-07 19:12:06,600 - AIObserver - INFO - AI前沿观察者日报任务启动
+2026-07-07 19:12:06,600 - AIObserver - INFO - ============================================================
+2026-07-07 19:12:06,600 - AIObserver - INFO - 开始从所有数据源获取新闻...
+2026-07-07 19:12:06,601 - AIObserver - INFO - 从 Bing News 获取到 5 条新闻
+2026-07-07 19:12:07,192 - AIObserver - INFO - 从 arXiv 获取到 10 条新闻
+2026-07-07 19:12:07,192 - AIObserver - INFO - 从 GitHub Trending 获取到 3 条新闻
+2026-07-07 19:12:07,192 - AIObserver - INFO - 从 Hacker News 获取到 3 条新闻
+2026-07-07 19:12:08,612 - AIObserver - INFO - 从 RSS订阅 获取到 5 条新闻
+2026-07-07 19:12:08,612 - AIObserver - INFO - 从 知乎热榜 获取到 3 条新闻
+2026-07-07 19:12:09,236 - AIObserver - INFO - 从 科技媒体 获取到 0 条新闻
+2026-07-07 19:12:09,236 - AIObserver - INFO - 共获取到 29 条新闻
+2026-07-07 19:12:09,236 - AIObserver - INFO - 开始处理新闻...
+2026-07-07 19:12:09,237 - AIObserver - INFO - NewsCategorizer 处理完成
+2026-07-07 19:12:58,916 - AIObserver - INFO - AISummarizer 处理完成
+2026-07-07 19:12:58,917 - AIObserver - INFO - TrendAnalyzer 处理完成
+2026-07-07 19:12:58,917 - AIObserver - INFO - 开始生成日报...
+2026-07-07 19:12:58,918 - AIObserver - INFO - 日报生成完成
+2026-07-07 19:12:58,918 - AIObserver - INFO - 开始分发日报...
+2026-07-07 19:12:58,919 - AIObserver - INFO - File 分发成功
+2026-07-07 19:13:00,592 - AIObserver - INFO - Email 分发成功
+2026-07-07 19:13:00,593 - AIObserver - INFO - Telegram 分发成功
+2026-07-07 19:13:00,593 - AIObserver - INFO - 日报任务执行完成

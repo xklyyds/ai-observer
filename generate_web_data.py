@@ -13,7 +13,13 @@ def parse_report_file(filepath):
         'displayDate': '',
         'generatedAt': '',
         'newsCount': 0,
-        'news': []
+        'news': [],
+        'categories': {},
+        'trends': {
+            'topCategories': [],
+            'topTags': [],
+            'topSources': []
+        }
     }
 
     date_match = re.search(r'日期:\s*(\d{4})年(\d{2})月(\d{2})日', content)
@@ -30,20 +36,101 @@ def parse_report_file(filepath):
     if count_match:
         report['newsCount'] = int(count_match.group(1))
 
-    news_pattern = re.compile(
-        r'(\d+)\.\s*(.+?)\n\s*来源:\s*(.+?)\n\s*摘要:\s*(.+?)\n\s*链接:\s*(.+?)(?=\n\n|\n\d+\.|\n-+$|\Z)',
-        re.DOTALL
-    )
+    trend_section = re.search(r'【今日趋势分析】(.*?)(?=\n【|\Z)', content, re.DOTALL)
+    if trend_section:
+        trend_text = trend_section.group(1)
+        
+        cat_pattern = re.compile(r'•\s*(.+?):\s*(\d+)条')
+        raw_cats = [{'name': name.strip(), 'count': int(count)} 
+                    for name, count in cat_pattern.findall(trend_text)]
+        
+        report['trends']['topCategories'] = [
+            c for c in raw_cats 
+            if 'scheme' not in c['name'] and 'http://' not in c['name']
+        ]
+        
+        tag_pattern = re.compile(r'•\s*#(.+?):\s*(\d+)条')
+        report['trends']['topTags'] = [
+            {'name': name.strip(), 'count': int(count)}
+            for name, count in tag_pattern.findall(trend_text)
+        ]
+        
+        source_pattern = re.compile(r'•\s*(.+?):\s*(\d+)条')
+        raw_sources = [{'name': name.strip(), 'count': int(count)} 
+                       for name, count in source_pattern.findall(trend_text)]
+        
+        valid_sources = ['arXiv', 'GitHub', 'Hacker News', '量子位', '知乎', 'OpenAI', 
+                         'DeepMind', 'Anthropic', 'Stability AI', 'TechCrunch']
+        report['trends']['topSources'] = [
+            s for s in raw_sources 
+            if any(vs.lower() in s['name'].lower() for vs in valid_sources)
+        ]
 
-    for match in news_pattern.finditer(content):
-        idx, title, source, summary, link = match.groups()
-        report['news'].append({
-            'id': int(idx),
-            'title': title.strip(),
-            'source': source.strip(),
-            'summary': summary.strip(),
-            'link': link.strip()
-        })
+    clean_content = re.sub(r'<[^>]+>', '', content)
+
+    category_sections = re.split(r'(📁\s+.+)', clean_content)
+    
+    current_category = '其他'
+    for i, part in enumerate(category_sections):
+        if part.startswith('📁'):
+            current_category = part[2:].strip()
+            if 'scheme' in current_category or 'http://' in current_category:
+                current_category = '其他'
+        else:
+            item_pattern = re.compile(
+                r'(\d+)\.\s*(.+?)(?:\s*\[([^\]]+)\])?\n\s*来源:\s*(.+?)\n\s*摘要:\s*(.+?)\n\s*链接:\s*(.+?)(?:\n\s*作者:\s*(.+?))?(?=\n\s*\d+\.|\Z)',
+                re.DOTALL
+            )
+
+            for item_match in item_pattern.finditer(part):
+                idx, title, tags_str, source, summary, link, author = item_match.groups()
+                tags = [t.strip().lstrip('#') for t in tags_str.split()] if tags_str else []
+                
+                link = link.strip()
+                if '\n' in link:
+                    link = link.split('\n')[0].strip()
+                
+                if link.startswith('📁'):
+                    link = ''
+                
+                news_item = {
+                    'id': int(idx),
+                    'title': title.strip(),
+                    'source': source.strip(),
+                    'summary': summary.strip(),
+                    'link': link,
+                    'author': author.strip() if author else '',
+                    'category': current_category,
+                    'tags': tags
+                }
+                report['news'].append(news_item)
+                
+                if current_category not in report['categories']:
+                    report['categories'][current_category] = []
+                report['categories'][current_category].append(news_item)
+
+    if not report['news']:
+        news_pattern_fallback = re.compile(
+            r'(\d+)\.\s*(.+?)\n\s*来源:\s*(.+?)\n\s*摘要:\s*(.+?)\n\s*链接:\s*(.+?)(?=\n\n|\n\d+\.|\n-+$|\Z)',
+            re.DOTALL
+        )
+        for match in news_pattern_fallback.finditer(content):
+            idx, title, source, summary, link = match.groups()
+            
+            link = link.strip()
+            if '\n' in link:
+                link = link.split('\n')[0].strip()
+            
+            report['news'].append({
+                'id': int(idx),
+                'title': title.strip(),
+                'source': source.strip(),
+                'summary': summary.strip(),
+                'link': link,
+                'category': '',
+                'tags': [],
+                'author': ''
+            })
 
     return report
 
@@ -65,15 +152,29 @@ def generate_reports_json():
                 except Exception as e:
                     print(f'Error parsing {filename}: {e}')
 
+    all_categories = set()
+    all_tags = set()
+    all_sources = set()
+    total_news = 0
+
+    for report in reports:
+        total_news += report['newsCount']
+        for news in report['news']:
+            cat = news.get('category')
+            if cat and 'scheme' not in cat and 'http://' not in cat:
+                all_categories.add(cat)
+            for tag in news.get('tags', []):
+                all_tags.add(tag)
+            if news.get('source'):
+                all_sources.add(news['source'])
+
     stats = {
         'totalReports': len(reports),
-        'totalNews': sum(r['newsCount'] for r in reports),
+        'totalNews': total_news,
         'latestDate': reports[0]['displayDate'] if reports else '',
-        'sources': list(set(
-            news['source']
-            for report in reports
-            for news in report['news']
-        ))
+        'sources': sorted(list(all_sources)),
+        'categories': sorted(list(all_categories)),
+        'tags': sorted(list(all_tags))
     }
 
     output_path = os.path.join(output_dir, 'reports.json')
@@ -86,6 +187,7 @@ def generate_reports_json():
     print(f'Generated {output_path}')
     print(f'Total reports: {len(reports)}')
     print(f'Total news: {stats["totalNews"]}')
+    print(f'Categories: {", ".join(stats["categories"])}')
 
 
 if __name__ == '__main__':

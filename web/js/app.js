@@ -22,14 +22,12 @@ const App = {
         }
         
         try {
-            if (typeof window.createClient === 'function') {
-                this.supabase = window.createClient(supabaseUrl, supabaseKey);
-                this.loadDeletedItems();
-            } else if (typeof window.supabase?.createClient === 'function') {
+            if (typeof window.supabase !== 'undefined' && typeof window.supabase.createClient === 'function') {
                 this.supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+                console.log('Supabase initialized successfully');
                 this.loadDeletedItems();
             } else {
-                throw new Error('Supabase SDK not loaded');
+                throw new Error('Supabase SDK not loaded properly');
             }
         } catch (e) {
             console.error('Failed to initialize Supabase:', e);
