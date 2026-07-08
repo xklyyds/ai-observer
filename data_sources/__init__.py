@@ -9,6 +9,7 @@ from .tech_media import TechMediaDataSource
 from .nature import NatureDataSource
 from .mit_tech_review import MITTechReviewSource
 from .biorxiv import BioRxivSource
+from .reddit import RedditSource
 from config import DATA_SOURCES_CONFIG
 
 
@@ -23,6 +24,7 @@ DATA_SOURCE_REGISTRY = {
     "nature": NatureDataSource,
     "mit_tech_review": MITTechReviewSource,
     "biorxiv": BioRxivSource,
+    "reddit": RedditSource,
 }
 
 
@@ -89,6 +91,12 @@ def get_all_data_sources() -> list:
     if DATA_SOURCES_CONFIG.get("biorxiv", {}).get("enabled", True):
         config = DATA_SOURCES_CONFIG["biorxiv"]
         source = BioRxivSource(max_items=config.get("max_items", 10))
+        source.use_mock = config.get("use_mock", False)
+        sources.append(source)
+    
+    if DATA_SOURCES_CONFIG.get("reddit", {}).get("enabled", True):
+        config = DATA_SOURCES_CONFIG["reddit"]
+        source = RedditSource(max_items=config.get("max_items", 15))
         source.use_mock = config.get("use_mock", False)
         sources.append(source)
     

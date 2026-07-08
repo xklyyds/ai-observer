@@ -36,8 +36,8 @@ DATA_SOURCES_CONFIG = {
     "arxiv": {
         "enabled": True,
         "use_mock": False,
-        "categories": ["cs.AI", "cs.LG", "stat.ML", "cs.CV", "cs.CL", "cs.SE", "cs.CR", "cs.NE", "cs.RO", "cs.DC"],
-        "max_results": 30
+        "categories": ["cs.AI", "cs.LG", "stat.ML", "cs.CV", "cs.CL", "cs.SE", "cs.CR", "cs.NE", "cs.RO", "cs.DC", "q-bio.BM", "q-bio.GN", "q-bio.QM", "math.OC", "physics.comp-ph"],
+        "max_results": 50
     },
     "github": {
         "enabled": True,
@@ -78,6 +78,11 @@ DATA_SOURCES_CONFIG = {
         "enabled": True,
         "use_mock": False,
         "max_items": 10
+    },
+    "reddit": {
+        "enabled": True,
+        "use_mock": False,
+        "max_items": 15
     }
 }
 
@@ -107,4 +112,7 @@ DISTRIBUTORS_CONFIG = {
 
 REPORT_OUTPUT_DIR = "./reports"
 LOG_FILE = "./ai_daily_report.log"
+
+
+
 
