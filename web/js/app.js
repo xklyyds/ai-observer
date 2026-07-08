@@ -11,7 +11,7 @@ const App = {
     currentPage: 1,
     pageSize: 10,
     
-    initSupabase() {
+    async initSupabase() {
         const supabaseUrl = 'https://spgmbocskmtaorgbiawl.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNwZ21ib2Nza210YW9yZ2JpYXdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM0NzQwNzMsImV4cCI6MjA5OTA1MDA3M30.MyhNCGnWDhDCgOln1sxHXMBAikQZKjvYaBsVQUrYdeY';
         
@@ -25,7 +25,7 @@ const App = {
             if (typeof window.supabase !== 'undefined' && typeof window.supabase.createClient === 'function') {
                 this.supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
                 console.log('Supabase initialized successfully');
-                this.loadDeletedItems();
+                await this.loadDeletedItems();
             } else {
                 throw new Error('Supabase SDK not loaded properly');
             }
@@ -83,10 +83,17 @@ const App = {
         
         if (this.supabase) {
             try {
-                await this.supabase.from('deleted_reports').upsert({ date });
+                const result = await this.supabase.from('deleted_reports').upsert({ date });
+                if (result.error) {
+                    console.error('Supabase error:', result.error);
+                } else {
+                    console.log('Successfully saved deleted report to Supabase:', date);
+                }
             } catch (e) {
                 console.error('Failed to delete report:', e);
             }
+        } else {
+            console.warn('Supabase not initialized - using localStorage only');
         }
         
         this.refreshData();
@@ -184,7 +191,7 @@ const App = {
         console.log('App init started');
         
         try {
-            this.initSupabase();
+            await this.initSupabase();
         } catch (e) {
             console.error('Failed to initialize Supabase:', e);
             this.loadDeletedItemsFromLocal();
