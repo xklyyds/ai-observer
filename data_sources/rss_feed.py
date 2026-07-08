@@ -1,4 +1,4 @@
-import urllib.request
+﻿import urllib.request
 import re
 import ssl
 from typing import List
@@ -55,7 +55,12 @@ class RSSFeedDataSource(DataSource):
             except Exception as e:
                 self.logger.error(f"从 {feed_name} 获取新闻失败: {str(e)}")
         
-        if not all_items:`r`n            self.logger.warning("所有RSS源获取失败，使用模拟数据")`r`n            return self._get_mock_data()`r`n        `r`n        self.logger.info(f"共获取到 {len(all_items)} 条RSS新闻")`r`n        return all_items
+        if not all_items:
+            self.logger.warning('所有RSS源获取失败，使用模拟数据')
+            return self._get_mock_data()
+        
+        self.logger.info(f'共获取到 {len(all_items)} 条RSS新闻')
+        return all_items
     
     def _parse_rss(self, xml_content: str, source: str) -> List[NewsItem]:
         items = []
@@ -143,3 +148,4 @@ class RSSFeedDataSource(DataSource):
                      source="Neuralink", date_published="2026-07-06",
                      tags=["脑机接口", "Neuralink", "神经科学"]),
         ]
+
