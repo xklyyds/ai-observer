@@ -16,7 +16,16 @@
     CAT_ICONS: {
         "ai": "🧠", "quantum": "⚛️", "biotech": "🧬",
         "materials": "🔬", "computing": "💻", "space": "🚀",
-        "robotics": "🤖", "energy": "⚡", "math": "📐"
+        "robotics": "🤖", "energy": "⚡", "math": "📐"    },
+
+    SOURCE_NAMES: {
+        "arXiv": "arXiv预印本", "Nature": "Nature期刊", "Science": "Science期刊",
+        "MIT Technology Review": "MIT科技评论", "bioRxiv": "bioRxiv预印本",
+        "GitHub Trending": "GitHub热榜", "Hacker News": "HackerNews",
+        "Google DeepMind": "DeepMind", "OpenAI": "OpenAI",
+        "Google Quantum AI": "谷歌量子AI", "Neuralink": "Neuralink",
+        "台积电": "台积电", "Microsoft": "微软", "NASA": "NASA",
+        "Stability AI": "Stability AI", "Anthropic": "Anthropic",
     },
 
     async init() {
@@ -237,7 +246,7 @@
             </div>
             ${a.description ? `<div class="card-description">${this._escapeHtml(a.description)}</div>` : ""}
             <div class="card-meta">
-                <span class="source-badge${hasHighSource ? ' high' : ''}">${this._escapeHtml(a.source_name)}</span>
+                <span class="source-badge${hasHighSource ? ' high' : ''}">${this._escapeHtml(this.SOURCE_NAMES[a.source_name] || a.source_name)}</span>
                 <span class="card-date">${a.published_date || ""}</span>
             </div>
             ${catsHtml ? `<div class="card-categories">${catsHtml}</div>` : ""}

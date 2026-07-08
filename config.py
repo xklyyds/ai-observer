@@ -1,4 +1,4 @@
-﻿import os
+import os
 
 import os
 from pathlib import Path
@@ -68,6 +68,16 @@ DATA_SOURCES_CONFIG = {
         "enabled": True,
         "use_mock": True,
         "max_items": 15
+    },
+    "mit_tech_review": {
+        "enabled": True,
+        "use_mock": True,
+        "max_items": 10
+    },
+    "biorxiv": {
+        "enabled": True,
+        "use_mock": True,
+        "max_items": 10
     }
 }
 
