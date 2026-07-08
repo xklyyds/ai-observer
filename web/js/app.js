@@ -228,6 +228,7 @@ const App = {
     setupRouter() {
         document.querySelectorAll('[data-route]').forEach(link => {
             link.addEventListener('click', (e) => {
+                e.preventDefault();
                 const route = link.dataset.route;
                 window.location.hash = route;
                 this.handleRoute();
