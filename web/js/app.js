@@ -170,13 +170,25 @@ const App = {
     },
     
     async init() {
+        console.log('App init started');
+        
         this.initSupabase();
-        await this.loadData();
+        
+        try {
+            await this.loadData();
+            console.log('Data loaded:', this.data ? Object.keys(this.data) : 'null');
+        } catch (e) {
+            console.error('Failed to load data:', e);
+        }
+        
         this.updateSidebarStats();
         this.setupSidebarToggle();
         this.setupRouter();
-        this.handleRoute();
-        window.addEventListener('hashchange', () => this.handleRoute());
+        
+        setTimeout(() => {
+            this.handleRoute();
+            console.log('Initial route handled');
+        }, 100);
     },
     
     async loadData() {
@@ -226,13 +238,19 @@ const App = {
     },
     
     setupRouter() {
-        document.querySelectorAll('[data-route]').forEach(link => {
-            link.addEventListener('click', (e) => {
+        const navLinks = document.querySelectorAll('[data-route]');
+        
+        navLinks.forEach(link => {
+            link.onclick = (e) => {
                 e.preventDefault();
                 const route = link.dataset.route;
                 window.location.hash = route;
                 this.handleRoute();
-            });
+            };
+        });
+        
+        window.addEventListener('hashchange', () => {
+            this.handleRoute();
         });
     },
     
@@ -240,26 +258,42 @@ const App = {
         const hash = window.location.hash.slice(1) || '/';
         const app = document.getElementById('app');
         
+        if (!app) {
+            console.error('App container not found');
+            return;
+        }
+        
+        if (!this.data || !this.data.reports) {
+            console.error('Data not loaded');
+            app.innerHTML = '<div style="text-align:center;padding:40px;color:#666;">数据加载中...</div>';
+            return;
+        }
+        
         this.updateActiveNav(hash);
         this.updatePageTitle(hash);
         
-        if (hash === '/' || hash === '') {
-            app.innerHTML = this.renderDashboard();
-        } else if (hash === '/reports') {
-            app.innerHTML = this.renderReportsList();
-        } else if (hash === '/search') {
-            app.innerHTML = this.renderSearch();
-        } else if (hash.startsWith('/reports/')) {
-            const date = hash.split('/')[2];
-            app.innerHTML = this.renderReportDetail(date);
-        } else {
-            app.innerHTML = this.renderNotFound();
+        try {
+            if (hash === '/' || hash === '') {
+                app.innerHTML = this.renderDashboard();
+            } else if (hash === '/reports') {
+                app.innerHTML = this.renderReportsList();
+            } else if (hash === '/search') {
+                app.innerHTML = this.renderSearch();
+            } else if (hash.startsWith('/reports/')) {
+                const date = hash.split('/')[2];
+                app.innerHTML = this.renderReportDetail(date);
+            } else {
+                app.innerHTML = this.renderNotFound();
+            }
+            
+            window.scrollTo(0, 0);
+            this.setupSearchEvents();
+            this.setupCategoryFilters();
+            this.setupCollapsibleCards();
+        } catch (e) {
+            console.error('Error rendering route:', e);
+            app.innerHTML = '<div style="text-align:center;padding:40px;color:#666;">页面加载出错</div>';
         }
-        
-        window.scrollTo(0, 0);
-        this.setupSearchEvents();
-        this.setupCategoryFilters();
-        this.setupCollapsibleCards();
     },
     
     updateActiveNav(hash) {
