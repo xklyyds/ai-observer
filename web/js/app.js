@@ -21,8 +21,21 @@ const App = {
             return;
         }
         
-        this.supabase = window.createClient(supabaseUrl, supabaseKey);
-        this.loadDeletedItems();
+        try {
+            if (typeof window.createClient === 'function') {
+                this.supabase = window.createClient(supabaseUrl, supabaseKey);
+                this.loadDeletedItems();
+            } else if (typeof window.supabase?.createClient === 'function') {
+                this.supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+                this.loadDeletedItems();
+            } else {
+                throw new Error('Supabase SDK not loaded');
+            }
+        } catch (e) {
+            console.error('Failed to initialize Supabase:', e);
+            console.warn('Falling back to localStorage');
+            this.loadDeletedItemsFromLocal();
+        }
     },
     
     async loadDeletedItems() {
@@ -172,13 +185,19 @@ const App = {
     async init() {
         console.log('App init started');
         
-        this.initSupabase();
+        try {
+            this.initSupabase();
+        } catch (e) {
+            console.error('Failed to initialize Supabase:', e);
+            this.loadDeletedItemsFromLocal();
+        }
         
         try {
             await this.loadData();
             console.log('Data loaded:', this.data ? Object.keys(this.data) : 'null');
         } catch (e) {
             console.error('Failed to load data:', e);
+            this.data = { stats: { totalReports: 0, totalNews: 0, latestDate: '', sources: [], categories: [], tags: [] }, reports: [] };
         }
         
         this.updateSidebarStats();
