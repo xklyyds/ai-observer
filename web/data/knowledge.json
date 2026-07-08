@@ -1,0 +1,2716 @@
+{
+  "generated_at": "2026-07-08 17:22:28",
+  "stats": {
+    "total_articles": 28,
+    "total_categories": 37,
+    "total_tags": 129,
+    "active_sources": 0,
+    "subscribers": 0,
+    "latest_update": "Wed, 08 Jul 2026 07:51:26 +0000"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "人工智能",
+      "slug": "ai",
+      "parent_id": null,
+      "description": "人工智能与机器学习领域的前沿进展",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 5,
+          "name": "AI基础设施",
+          "slug": "ai/infra",
+          "parent_id": 1,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 6,
+          "name": "AI安全与对齐",
+          "slug": "ai/safety",
+          "parent_id": 1,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 7,
+          "name": "AI应用",
+          "slug": "ai/app",
+          "parent_id": 1,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "parent_id": 1,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 4,
+          "name": "自然语言处理",
+          "slug": "ai/nlp",
+          "parent_id": 1,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 3,
+          "name": "计算机视觉",
+          "slug": "ai/cv",
+          "parent_id": 1,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "数学与理论",
+      "slug": "math",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 37,
+          "name": "数学与算法理论",
+          "slug": "math/theory",
+          "parent_id": 35,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 36,
+          "name": "理论物理",
+          "slug": "math/physics",
+          "parent_id": 35,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "新材料",
+      "slug": "materials",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 17,
+          "name": "半导体与芯片",
+          "slug": "materials/chip",
+          "parent_id": 16,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 18,
+          "name": "纳米材料",
+          "slug": "materials/nano",
+          "parent_id": 16,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 19,
+          "name": "超导材料",
+          "slug": "materials/superconductor",
+          "parent_id": 16,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "机器人",
+      "slug": "robotics",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 29,
+          "name": "人形机器人",
+          "slug": "robotics/humanoid",
+          "parent_id": 28,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 30,
+          "name": "自动驾驶",
+          "slug": "robotics/auto",
+          "parent_id": 28,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "生物科技",
+      "slug": "biotech",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 15,
+          "name": "合成生物学",
+          "slug": "biotech/synthetic",
+          "parent_id": 11,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 12,
+          "name": "基因编辑与基因组学",
+          "slug": "biotech/genome",
+          "parent_id": 11,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 14,
+          "name": "脑科学与脑机接口",
+          "slug": "biotech/brain",
+          "parent_id": 11,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 13,
+          "name": "蛋白质科学",
+          "slug": "biotech/protein",
+          "parent_id": 11,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "能源与环境",
+      "slug": "energy",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 33,
+          "name": "储能与电池",
+          "slug": "energy/battery",
+          "parent_id": 31,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 32,
+          "name": "可控核聚变",
+          "slug": "energy/fusion",
+          "parent_id": 31,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 34,
+          "name": "新能源技术",
+          "slug": "energy/renewable",
+          "parent_id": 31,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "航天与天文",
+      "slug": "space",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 27,
+          "name": "卫星与遥感",
+          "slug": "space/satellite",
+          "parent_id": 24,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 26,
+          "name": "天文观测",
+          "slug": "space/astronomy",
+          "parent_id": 24,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 25,
+          "name": "航天发射与探索",
+          "slug": "space/launch",
+          "parent_id": 24,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "计算科学与系统",
+      "slug": "computing",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 23,
+          "name": "云计算与基础设施",
+          "slug": "computing/cloud",
+          "parent_id": 20,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "parent_id": 20,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 22,
+          "name": "网络安全与密码学",
+          "slug": "computing/security",
+          "parent_id": 20,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "量子科技",
+      "slug": "quantum",
+      "parent_id": null,
+      "description": "",
+      "sort_order": 0,
+      "children": [
+        {
+          "id": 9,
+          "name": "量子计算",
+          "slug": "quantum/computing",
+          "parent_id": 8,
+          "description": "",
+          "sort_order": 0
+        },
+        {
+          "id": 10,
+          "name": "量子通信",
+          "slug": "quantum/comm",
+          "parent_id": 8,
+          "description": "",
+          "sort_order": 0
+        }
+      ]
+    }
+  ],
+  "latest_articles": [
+    {
+      "id": 42,
+      "title": "阿里斩获国际AI顶会最佳资源论文奖，提出Agent评测新范式",
+      "url": "https://www.qbitai.com/2026/07/446069.html",
+      "source_id": null,
+      "source_name": "量子位",
+      "description": "",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "Wed, 08 Jul 2026 07:51:26 +0000",
+      "fetched_date": "2026-07-08 09:04:36",
+      "language": "zh",
+      "quality_score": 50,
+      "importance": "normal",
+      "url_hash": "5999a2e60ceb8091a0240ba8cbd6a68e",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.05555555555555555
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 15,
+      "title": "高德发布Phys AI Data：首个面向物理AI训练与应用的一站式空间数据基座",
+      "url": "https://www.qbitai.com/2026/07/445946.html",
+      "source_id": null,
+      "source_name": "量子位",
+      "description": "",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "Wed, 08 Jul 2026 07:42:27 +0000",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 50,
+      "importance": "important",
+      "url_hash": "7686578af7f74302a1fc6928b435d04d",
+      "categories": [
+        {
+          "id": 35,
+          "name": "数学与理论",
+          "slug": "math",
+          "confidence": 0.09230769230769231
+        },
+        {
+          "id": 36,
+          "name": "理论物理",
+          "slug": "math/physics",
+          "confidence": 0.11538461538461539
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 16,
+      "title": "智能伙伴 共创未来！WAIC 2026即将举行并首发主题片",
+      "url": "https://www.qbitai.com/2026/07/445904.html",
+      "source_id": null,
+      "source_name": "量子位",
+      "description": "",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "Wed, 08 Jul 2026 07:33:50 +0000",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 50,
+      "importance": "normal",
+      "url_hash": "956bde70bf068fea9a7901594fe81027",
+      "categories": [],
+      "tags": []
+    },
+    {
+      "id": 17,
+      "title": "DeepSeek秘密造芯！专攻推理，一年前已启动，招聘全程不公开",
+      "url": "https://www.qbitai.com/2026/07/445883.html",
+      "source_id": null,
+      "source_name": "量子位",
+      "description": "",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "Wed, 08 Jul 2026 04:47:04 +0000",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 50,
+      "importance": "normal",
+      "url_hash": "dc545545fa13aaf7cef7fbd5cd4d8ec5",
+      "categories": [],
+      "tags": []
+    },
+    {
+      "id": 18,
+      "title": "60000小时炼出新开源VLA！20多种机器人都能用",
+      "url": "https://www.qbitai.com/2026/07/445678.html",
+      "source_id": null,
+      "source_name": "量子位",
+      "description": "",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "Wed, 08 Jul 2026 03:54:42 +0000",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 50,
+      "importance": "important",
+      "url_hash": "ca841bc46334b96b7b7f289f9007d4e9",
+      "categories": [
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.07058823529411765
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "confidence": 0.08823529411764705
+        },
+        {
+          "id": 28,
+          "name": "机器人",
+          "slug": "robotics",
+          "confidence": 0.09090909090909091
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 19,
+      "title": "支持17家机器人厂商20多种构型，蚂蚁灵波LingBot-VLA 2.0正式开源",
+      "url": "https://www.qbitai.com/2026/07/445668.html",
+      "source_id": null,
+      "source_name": "量子位",
+      "description": "",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "Wed, 08 Jul 2026 03:04:08 +0000",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 50,
+      "importance": "important",
+      "url_hash": "981d555810ff106b88a874be9898a9ec",
+      "categories": [
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.07058823529411765
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "confidence": 0.08823529411764705
+        },
+        {
+          "id": 28,
+          "name": "机器人",
+          "slug": "robotics",
+          "confidence": 0.09090909090909091
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 23,
+      "title": "CRISPR 2.0: Next-generation gene editing achieves unprecedented precision",
+      "url": "https://www.nature.com/articles/d41586-024-00123-4",
+      "source_id": null,
+      "source_name": "Nature",
+      "description": "新一代CRISPR技术实现前所未有的基因编辑精度，有望用于治疗遗传疾病",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:28",
+      "language": "en",
+      "quality_score": 95,
+      "importance": "important",
+      "url_hash": "dc74c62ae0cc5c5a50388d0045c83094",
+      "categories": [
+        {
+          "id": 11,
+          "name": "生物科技",
+          "slug": "biotech",
+          "confidence": 0.2
+        },
+        {
+          "id": 12,
+          "name": "基因编辑与基因组学",
+          "slug": "biotech/genome",
+          "confidence": 0.25
+        }
+      ],
+      "tags": [
+        {
+          "id": 86,
+          "name": "CRISPR",
+          "tag_type": "technology"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Room-temperature superconductor claim validated by multiple labs",
+      "url": "https://www.nature.com/articles/d41586-024-00234-5",
+      "source_id": null,
+      "source_name": "Nature",
+      "description": "多个实验室验证室温超导材料的存在性，引发物理学和材料科学界震动",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:28",
+      "language": "en",
+      "quality_score": 95,
+      "importance": "important",
+      "url_hash": "6c2245d4726c1b887e7dc0f93d642fce",
+      "categories": [
+        {
+          "id": 16,
+          "name": "新材料",
+          "slug": "materials",
+          "confidence": 0.26666666666666666
+        },
+        {
+          "id": 19,
+          "name": "超导材料",
+          "slug": "materials/superconductor",
+          "confidence": 0.3333333333333333
+        },
+        {
+          "id": 35,
+          "name": "数学与理论",
+          "slug": "math",
+          "confidence": 0.09230769230769231
+        },
+        {
+          "id": 36,
+          "name": "理论物理",
+          "slug": "math/physics",
+          "confidence": 0.11538461538461539
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 25,
+      "title": "Quantum computer solves problem 1000x faster than classical supercomputer",
+      "url": "https://www.nature.com/articles/d41586-024-00345-6",
+      "source_id": null,
+      "source_name": "Nature",
+      "description": "量子计算机在特定问题上比经典超算快1000倍，量子优势达到新里程碑",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:28",
+      "language": "en",
+      "quality_score": 95,
+      "importance": "breakthrough",
+      "url_hash": "248e49e0d8144b184b202225ccc843d0",
+      "categories": [
+        {
+          "id": 8,
+          "name": "量子科技",
+          "slug": "quantum",
+          "confidence": 0.18461538461538463
+        },
+        {
+          "id": 9,
+          "name": "量子计算",
+          "slug": "quantum/computing",
+          "confidence": 0.23076923076923078
+        },
+        {
+          "id": 24,
+          "name": "航天与天文",
+          "slug": "space",
+          "confidence": 0.08000000000000002
+        },
+        {
+          "id": 26,
+          "name": "天文观测",
+          "slug": "space/astronomy",
+          "confidence": 0.1
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 26,
+      "title": "Brain-computer interface enables speech synthesis at conversational speed",
+      "url": "https://www.nature.com/articles/d41586-024-00456-7",
+      "source_id": null,
+      "source_name": "Nature",
+      "description": "脑机接口实现接近正常对话速度的语音合成，为失语患者带来希望",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:28",
+      "language": "en",
+      "quality_score": 95,
+      "importance": "important",
+      "url_hash": "d8475b60d52becbb81819c44001f7b5c",
+      "categories": [
+        {
+          "id": 11,
+          "name": "生物科技",
+          "slug": "biotech",
+          "confidence": 0.09230769230769231
+        },
+        {
+          "id": 14,
+          "name": "脑科学与脑机接口",
+          "slug": "biotech/brain",
+          "confidence": 0.11538461538461539
+        }
+      ],
+      "tags": [
+        {
+          "id": 102,
+          "name": "Brain-Computer Interface",
+          "tag_type": "technology"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "First synthetic eukaryotic chromosome created, advancing synthetic biology",
+      "url": "https://www.nature.com/articles/d41586-024-00567-8",
+      "source_id": null,
+      "source_name": "Nature",
+      "description": "首次合成真核生物完整染色体，合成生物学迈出里程碑式一步",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:28",
+      "language": "en",
+      "quality_score": 95,
+      "importance": "breakthrough",
+      "url_hash": "dd198ef883ac30685ef9183d63ab6c58",
+      "categories": [
+        {
+          "id": 11,
+          "name": "生物科技",
+          "slug": "biotech",
+          "confidence": 0.15000000000000002
+        },
+        {
+          "id": 15,
+          "name": "合成生物学",
+          "slug": "biotech/synthetic",
+          "confidence": 0.1875
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 2,
+      "title": "DeepMind推出新一代AlphaFold，蛋白质结构预测准确率突破99%",
+      "url": "https://deepmind.google/discover/blog/alphafold-update/",
+      "source_id": null,
+      "source_name": "Google DeepMind",
+      "description": "AlphaFold最新版本在CASP16竞赛中取得突破性成果，预测准确率达到99.2%",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:21:52",
+      "language": "zh",
+      "quality_score": 85,
+      "importance": "breakthrough",
+      "url_hash": "73045b9f255745f616ae93a6bc5b7f0b",
+      "categories": [
+        {
+          "id": 11,
+          "name": "生物科技",
+          "slug": "biotech",
+          "confidence": 0.32727272727272727
+        },
+        {
+          "id": 13,
+          "name": "蛋白质科学",
+          "slug": "biotech/protein",
+          "confidence": 0.40909090909090906
+        }
+      ],
+      "tags": [
+        {
+          "id": 2,
+          "name": "Google DeepMind",
+          "tag_type": "company"
+        },
+        {
+          "id": 18,
+          "name": "Google",
+          "tag_type": "company"
+        },
+        {
+          "id": 88,
+          "name": "AlphaFold",
+          "tag_type": "technology"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "GPT-5 模型性能大幅提升，推理速度提高300%",
+      "url": "https://openai.com/blog/gpt-5-update",
+      "source_id": null,
+      "source_name": "OpenAI",
+      "description": "OpenAI今日发布GPT-5模型更新，在保持高精度的同时，推理速度相比GPT-4提升了300%",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:21:52",
+      "language": "zh",
+      "quality_score": 80,
+      "importance": "important",
+      "url_hash": "9ff8bf96a54801a66c45ff9ec308af39",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.06315789473684211
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "confidence": 0.07894736842105263
+        },
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.07058823529411765
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "confidence": 0.08823529411764705
+        }
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "OpenAI",
+          "tag_type": "company"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Anthropic发布Claude 3.5，支持百万token上下文窗口",
+      "url": "https://www.anthropic.com/index/claude-3-5",
+      "source_id": null,
+      "source_name": "Anthropic",
+      "description": "Claude 3.5正式发布，支持1M token上下文，在长文本处理任务中表现优异",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:21:52",
+      "language": "zh",
+      "quality_score": 80,
+      "importance": "important",
+      "url_hash": "f474e5cfa9b5e9c3111062b33ece5512",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.18947368421052632
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "confidence": 0.23684210526315788
+        }
+      ],
+      "tags": [
+        {
+          "id": 3,
+          "name": "Anthropic",
+          "tag_type": "company"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "LLM Agents: Autonomous Reasoning and Tool Use",
+      "url": "https://arxiv.org/abs/2401.15995",
+      "source_id": null,
+      "source_name": "arXiv",
+      "description": "提出了一种新的LLM代理框架，实现自主推理和工具使用，在复杂任务上表现优异",
+      "content_snippet": "",
+      "author": "Wang et al.",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:07",
+      "language": "en",
+      "quality_score": 75,
+      "importance": "normal",
+      "url_hash": "026200c2101867484419903673fa4248",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.1111111111111111
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "confidence": 0.07894736842105263
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 7,
+      "title": "Diffusion Models with Attention Mechanism",
+      "url": "https://arxiv.org/abs/2401.14567",
+      "source_id": null,
+      "source_name": "arXiv",
+      "description": "将注意力机制引入扩散模型，显著提升图像生成质量和效率",
+      "content_snippet": "",
+      "author": "Chen et al.",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "en",
+      "quality_score": 75,
+      "importance": "normal",
+      "url_hash": "ab3b1cf597b3d97ac646479f631f2326",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.1111111111111111
+        },
+        {
+          "id": 3,
+          "name": "计算机视觉",
+          "slug": "ai/cv",
+          "confidence": 0.1
+        }
+      ],
+      "tags": [
+        {
+          "id": 79,
+          "name": "Attention",
+          "tag_type": "technology"
+        },
+        {
+          "id": 80,
+          "name": "Diffusion Model",
+          "tag_type": "technology"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Efficient Training of Foundation Models",
+      "url": "https://arxiv.org/abs/2401.13456",
+      "source_id": null,
+      "source_name": "arXiv",
+      "description": "提出高效训练基础模型的新方法，训练成本降低50%",
+      "content_snippet": "",
+      "author": "Li et al.",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "en",
+      "quality_score": 75,
+      "importance": "normal",
+      "url_hash": "0d5a1fdbca7b47f48f5fefdaf2347bb5",
+      "categories": [],
+      "tags": []
+    },
+    {
+      "id": 9,
+      "title": "LlamaIndex: 数据增强的LLM应用框架",
+      "url": "https://github.com/run-llama/llama_index",
+      "source_id": null,
+      "source_name": "GitHub",
+      "description": "为LLM应用提供数据连接和增强功能的开源框架，支持多种数据源",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "zh",
+      "quality_score": 60,
+      "importance": "important",
+      "url_hash": "4eb75fcb45e011846f8e06b9eebf54a3",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.12631578947368421
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "confidence": 0.15789473684210525
+        },
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.1411764705882353
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "confidence": 0.1764705882352941
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 10,
+      "title": "LangChain: 构建LLM应用的工具包",
+      "url": "https://github.com/langchain-ai/langchain",
+      "source_id": null,
+      "source_name": "GitHub",
+      "description": "用于开发由语言模型驱动的应用程序的框架，支持链、代理等模式",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "zh",
+      "quality_score": 60,
+      "importance": "normal",
+      "url_hash": "903bfb06cf519c4b075bb03e9d21857e",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.12631578947368421
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "confidence": 0.15789473684210525
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 11,
+      "title": "Stable Diffusion WebUI: 图像生成工具",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "source_id": null,
+      "source_name": "GitHub",
+      "description": "基于Stable Diffusion的Web界面，提供丰富的图像生成功能",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "zh",
+      "quality_score": 60,
+      "importance": "normal",
+      "url_hash": "212d7171cf46bef1f3a36ebce9020b64",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.08000000000000002
+        },
+        {
+          "id": 3,
+          "name": "计算机视觉",
+          "slug": "ai/cv",
+          "confidence": 0.1
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 5,
+      "title": "AI芯片市场竞争加剧，多家厂商推出新一代产品",
+      "url": "https://techcrunch.com/2024/01/15/ai-chip-market-heats-up/",
+      "source_id": null,
+      "source_name": "TechCrunch",
+      "description": "NVIDIA、AMD、Intel等厂商纷纷发布新一代AI芯片，性能提升显著",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:21:52",
+      "language": "zh",
+      "quality_score": 55,
+      "importance": "important",
+      "url_hash": "ec41a7264088c8caa49cdb974e286ac3",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.07058823529411765
+        },
+        {
+          "id": 5,
+          "name": "AI基础设施",
+          "slug": "ai/infra",
+          "confidence": 0.08823529411764705
+        },
+        {
+          "id": 16,
+          "name": "新材料",
+          "slug": "materials",
+          "confidence": 0.21818181818181817
+        },
+        {
+          "id": 17,
+          "name": "半导体与芯片",
+          "slug": "materials/chip",
+          "confidence": 0.2727272727272727
+        },
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.08333333333333333
+        }
+      ],
+      "tags": [
+        {
+          "id": 22,
+          "name": "NVIDIA",
+          "tag_type": "company"
+        },
+        {
+          "id": 23,
+          "name": "AMD",
+          "tag_type": "company"
+        },
+        {
+          "id": 24,
+          "name": "Intel",
+          "tag_type": "company"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Show HN: An AI-powered search engine for research papers",
+      "url": "https://news.ycombinator.com/item?id=39001234",
+      "source_id": null,
+      "source_name": "Hacker News",
+      "description": "一个专注于研究论文的AI搜索引擎，支持语义搜索",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "en",
+      "quality_score": 50,
+      "importance": "normal",
+      "url_hash": "701f78cd621b87f4fbf02bf5552a1e5f",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.08571428571428572
+        },
+        {
+          "id": 7,
+          "name": "AI应用",
+          "slug": "ai/app",
+          "confidence": 0.10714285714285714
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 13,
+      "title": "OpenAI releases new model with improved reasoning",
+      "url": "https://news.ycombinator.com/item?id=39001123",
+      "source_id": null,
+      "source_name": "Hacker News",
+      "description": "OpenAI发布新模型，推理能力显著提升",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "en",
+      "quality_score": 50,
+      "importance": "important",
+      "url_hash": "51a4b5630596a6fc7ed6b2dc00102ea6",
+      "categories": [
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.07058823529411765
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "confidence": 0.08823529411764705
+        }
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "OpenAI",
+          "tag_type": "company"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Building AI agents that can browse the web autonomously",
+      "url": "https://news.ycombinator.com/item?id=39001098",
+      "source_id": null,
+      "source_name": "Hacker News",
+      "description": "构建能够自主浏览网页的AI代理系统",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:08",
+      "language": "en",
+      "quality_score": 50,
+      "importance": "normal",
+      "url_hash": "19a9998a6c0a33b661db81aa619beb8e",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.05555555555555555
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 4,
+      "title": "Stable Diffusion 4发布，图像生成质量再创新高",
+      "url": "https://stability.ai/news/stable-diffusion-4",
+      "source_id": null,
+      "source_name": "Stability AI",
+      "description": "Stability AI推出Stable Diffusion 4，在图像细节和一致性方面有显著提升",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:21:52",
+      "language": "zh",
+      "quality_score": 40,
+      "importance": "important",
+      "url_hash": "c8f8af18edb37176a54b612a9c9e6980",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.08000000000000002
+        },
+        {
+          "id": 3,
+          "name": "计算机视觉",
+          "slug": "ai/cv",
+          "confidence": 0.1
+        }
+      ],
+      "tags": [
+        {
+          "id": 7,
+          "name": "Stability AI",
+          "tag_type": "company"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "如何评价OpenAI最新发布的GPT-5模型？",
+      "url": "https://www.zhihu.com/question/123456789",
+      "source_id": null,
+      "source_name": "知乎",
+      "description": "讨论OpenAI最新模型的性能提升和技术突破",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 40,
+      "importance": "breakthrough",
+      "url_hash": "e72e68e329eef5327dd5bd5c5e4bd903",
+      "categories": [
+        {
+          "id": 1,
+          "name": "人工智能",
+          "slug": "ai",
+          "confidence": 0.06315789473684211
+        },
+        {
+          "id": 2,
+          "name": "大语言模型",
+          "slug": "ai/llm",
+          "confidence": 0.07894736842105263
+        },
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.07058823529411765
+        },
+        {
+          "id": 21,
+          "name": "开源与基础软件",
+          "slug": "computing/os",
+          "confidence": 0.08823529411764705
+        }
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "OpenAI",
+          "tag_type": "company"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "2024年AI行业发展趋势是什么？",
+      "url": "https://www.zhihu.com/question/123456790",
+      "source_id": null,
+      "source_name": "知乎",
+      "description": "行业专家分享对AI未来发展的看法和预测",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 40,
+      "importance": "normal",
+      "url_hash": "5202067da54b944af56705ac2797fffc",
+      "categories": [],
+      "tags": []
+    },
+    {
+      "id": 22,
+      "title": "AI大模型会取代程序员吗？",
+      "url": "https://www.zhihu.com/question/123456791",
+      "source_id": null,
+      "source_name": "知乎",
+      "description": "探讨AI对编程行业的影响和未来职业发展",
+      "content_snippet": "",
+      "author": "",
+      "published_date": "2026-07-08",
+      "fetched_date": "2026-07-08 09:22:27",
+      "language": "zh",
+      "quality_score": 40,
+      "importance": "normal",
+      "url_hash": "da445dfe48cd098cc2dbf67092afc8fa",
+      "categories": [
+        {
+          "id": 20,
+          "name": "计算科学与系统",
+          "slug": "computing",
+          "confidence": 0.08333333333333333
+        }
+      ],
+      "tags": []
+    }
+  ],
+  "tags": {
+    "all": [
+      {
+        "id": 1,
+        "name": "OpenAI",
+        "tag_type": "company",
+        "description": "公司/组织: OpenAI",
+        "article_count": 3
+      },
+      {
+        "id": 2,
+        "name": "Google DeepMind",
+        "tag_type": "company",
+        "description": "公司/组织: Google DeepMind",
+        "article_count": 1
+      },
+      {
+        "id": 3,
+        "name": "Anthropic",
+        "tag_type": "company",
+        "description": "公司/组织: Anthropic",
+        "article_count": 1
+      },
+      {
+        "id": 7,
+        "name": "Stability AI",
+        "tag_type": "company",
+        "description": "公司/组织: Stability AI",
+        "article_count": 1
+      },
+      {
+        "id": 18,
+        "name": "Google",
+        "tag_type": "company",
+        "description": "公司/组织: Google",
+        "article_count": 1
+      },
+      {
+        "id": 22,
+        "name": "NVIDIA",
+        "tag_type": "company",
+        "description": "公司/组织: NVIDIA",
+        "article_count": 1
+      },
+      {
+        "id": 23,
+        "name": "AMD",
+        "tag_type": "company",
+        "description": "公司/组织: AMD",
+        "article_count": 1
+      },
+      {
+        "id": 24,
+        "name": "Intel",
+        "tag_type": "company",
+        "description": "公司/组织: Intel",
+        "article_count": 1
+      },
+      {
+        "id": 79,
+        "name": "Attention",
+        "tag_type": "technology",
+        "description": "技术/概念: Attention",
+        "article_count": 1
+      },
+      {
+        "id": 80,
+        "name": "Diffusion Model",
+        "tag_type": "technology",
+        "description": "技术/概念: Diffusion Model",
+        "article_count": 1
+      },
+      {
+        "id": 86,
+        "name": "CRISPR",
+        "tag_type": "technology",
+        "description": "技术/概念: CRISPR",
+        "article_count": 1
+      },
+      {
+        "id": 88,
+        "name": "AlphaFold",
+        "tag_type": "technology",
+        "description": "技术/概念: AlphaFold",
+        "article_count": 1
+      },
+      {
+        "id": 102,
+        "name": "Brain-Computer Interface",
+        "tag_type": "technology",
+        "description": "技术/概念: Brain-Computer Interface",
+        "article_count": 1
+      },
+      {
+        "id": 4,
+        "name": "Meta AI",
+        "tag_type": "company",
+        "description": "公司/组织: Meta AI",
+        "article_count": 0
+      },
+      {
+        "id": 5,
+        "name": "Microsoft Research",
+        "tag_type": "company",
+        "description": "公司/组织: Microsoft Research",
+        "article_count": 0
+      },
+      {
+        "id": 6,
+        "name": "xAI",
+        "tag_type": "company",
+        "description": "公司/组织: xAI",
+        "article_count": 0
+      },
+      {
+        "id": 8,
+        "name": "Mistral",
+        "tag_type": "company",
+        "description": "公司/组织: Mistral",
+        "article_count": 0
+      },
+      {
+        "id": 9,
+        "name": "Cohere",
+        "tag_type": "company",
+        "description": "公司/组织: Cohere",
+        "article_count": 0
+      },
+      {
+        "id": 10,
+        "name": "Hugging Face",
+        "tag_type": "company",
+        "description": "公司/组织: Hugging Face",
+        "article_count": 0
+      },
+      {
+        "id": 11,
+        "name": "Midjourney",
+        "tag_type": "company",
+        "description": "公司/组织: Midjourney",
+        "article_count": 0
+      },
+      {
+        "id": 12,
+        "name": "Runway",
+        "tag_type": "company",
+        "description": "公司/组织: Runway",
+        "article_count": 0
+      },
+      {
+        "id": 13,
+        "name": "Perplexity",
+        "tag_type": "company",
+        "description": "公司/组织: Perplexity",
+        "article_count": 0
+      },
+      {
+        "id": 14,
+        "name": "Character.ai",
+        "tag_type": "company",
+        "description": "公司/组织: Character.ai",
+        "article_count": 0
+      },
+      {
+        "id": 15,
+        "name": "Inflection",
+        "tag_type": "company",
+        "description": "公司/组织: Inflection",
+        "article_count": 0
+      },
+      {
+        "id": 16,
+        "name": "Adept",
+        "tag_type": "company",
+        "description": "公司/组织: Adept",
+        "article_count": 0
+      },
+      {
+        "id": 17,
+        "name": "Apple",
+        "tag_type": "company",
+        "description": "公司/组织: Apple",
+        "article_count": 0
+      },
+      {
+        "id": 19,
+        "name": "Microsoft",
+        "tag_type": "company",
+        "description": "公司/组织: Microsoft",
+        "article_count": 0
+      },
+      {
+        "id": 20,
+        "name": "Meta",
+        "tag_type": "company",
+        "description": "公司/组织: Meta",
+        "article_count": 0
+      },
+      {
+        "id": 21,
+        "name": "Amazon",
+        "tag_type": "company",
+        "description": "公司/组织: Amazon",
+        "article_count": 0
+      },
+      {
+        "id": 25,
+        "name": "Qualcomm",
+        "tag_type": "company",
+        "description": "公司/组织: Qualcomm",
+        "article_count": 0
+      },
+      {
+        "id": 26,
+        "name": "Tesla",
+        "tag_type": "company",
+        "description": "公司/组织: Tesla",
+        "article_count": 0
+      },
+      {
+        "id": 27,
+        "name": "台积电",
+        "tag_type": "company",
+        "description": "公司/组织: 台积电",
+        "article_count": 0
+      },
+      {
+        "id": 28,
+        "name": "TSMC",
+        "tag_type": "company",
+        "description": "公司/组织: TSMC",
+        "article_count": 0
+      },
+      {
+        "id": 29,
+        "name": "三星",
+        "tag_type": "company",
+        "description": "公司/组织: 三星",
+        "article_count": 0
+      },
+      {
+        "id": 30,
+        "name": "Samsung",
+        "tag_type": "company",
+        "description": "公司/组织: Samsung",
+        "article_count": 0
+      },
+      {
+        "id": 31,
+        "name": "华为",
+        "tag_type": "company",
+        "description": "公司/组织: 华为",
+        "article_count": 0
+      },
+      {
+        "id": 32,
+        "name": "Huawei",
+        "tag_type": "company",
+        "description": "公司/组织: Huawei",
+        "article_count": 0
+      },
+      {
+        "id": 33,
+        "name": "字节跳动",
+        "tag_type": "company",
+        "description": "公司/组织: 字节跳动",
+        "article_count": 0
+      },
+      {
+        "id": 34,
+        "name": "ByteDance",
+        "tag_type": "company",
+        "description": "公司/组织: ByteDance",
+        "article_count": 0
+      },
+      {
+        "id": 35,
+        "name": "阿里巴巴",
+        "tag_type": "company",
+        "description": "公司/组织: 阿里巴巴",
+        "article_count": 0
+      },
+      {
+        "id": 36,
+        "name": "Alibaba",
+        "tag_type": "company",
+        "description": "公司/组织: Alibaba",
+        "article_count": 0
+      },
+      {
+        "id": 37,
+        "name": "腾讯",
+        "tag_type": "company",
+        "description": "公司/组织: 腾讯",
+        "article_count": 0
+      },
+      {
+        "id": 38,
+        "name": "Tencent",
+        "tag_type": "company",
+        "description": "公司/组织: Tencent",
+        "article_count": 0
+      },
+      {
+        "id": 39,
+        "name": "百度",
+        "tag_type": "company",
+        "description": "公司/组织: 百度",
+        "article_count": 0
+      },
+      {
+        "id": 40,
+        "name": "Baidu",
+        "tag_type": "company",
+        "description": "公司/组织: Baidu",
+        "article_count": 0
+      },
+      {
+        "id": 41,
+        "name": "京东",
+        "tag_type": "company",
+        "description": "公司/组织: 京东",
+        "article_count": 0
+      },
+      {
+        "id": 42,
+        "name": "JD",
+        "tag_type": "company",
+        "description": "公司/组织: JD",
+        "article_count": 0
+      },
+      {
+        "id": 43,
+        "name": "Boston Dynamics",
+        "tag_type": "company",
+        "description": "公司/组织: Boston Dynamics",
+        "article_count": 0
+      },
+      {
+        "id": 44,
+        "name": "Figure AI",
+        "tag_type": "company",
+        "description": "公司/组织: Figure AI",
+        "article_count": 0
+      },
+      {
+        "id": 45,
+        "name": "宇树科技",
+        "tag_type": "company",
+        "description": "公司/组织: 宇树科技",
+        "article_count": 0
+      },
+      {
+        "id": 46,
+        "name": "Unitree",
+        "tag_type": "company",
+        "description": "公司/组织: Unitree",
+        "article_count": 0
+      },
+      {
+        "id": 47,
+        "name": "Waymo",
+        "tag_type": "company",
+        "description": "公司/组织: Waymo",
+        "article_count": 0
+      },
+      {
+        "id": 48,
+        "name": "Cruise",
+        "tag_type": "company",
+        "description": "公司/组织: Cruise",
+        "article_count": 0
+      },
+      {
+        "id": 49,
+        "name": "优必选",
+        "tag_type": "company",
+        "description": "公司/组织: 优必选",
+        "article_count": 0
+      },
+      {
+        "id": 50,
+        "name": "SpaceX",
+        "tag_type": "company",
+        "description": "公司/组织: SpaceX",
+        "article_count": 0
+      },
+      {
+        "id": 51,
+        "name": "Blue Origin",
+        "tag_type": "company",
+        "description": "公司/组织: Blue Origin",
+        "article_count": 0
+      },
+      {
+        "id": 52,
+        "name": "Rocket Lab",
+        "tag_type": "company",
+        "description": "公司/组织: Rocket Lab",
+        "article_count": 0
+      },
+      {
+        "id": 53,
+        "name": "ULA",
+        "tag_type": "company",
+        "description": "公司/组织: ULA",
+        "article_count": 0
+      },
+      {
+        "id": 54,
+        "name": "IBM Quantum",
+        "tag_type": "company",
+        "description": "公司/组织: IBM Quantum",
+        "article_count": 0
+      },
+      {
+        "id": 55,
+        "name": "Rigetti",
+        "tag_type": "company",
+        "description": "公司/组织: Rigetti",
+        "article_count": 0
+      },
+      {
+        "id": 56,
+        "name": "IonQ",
+        "tag_type": "company",
+        "description": "公司/组织: IonQ",
+        "article_count": 0
+      },
+      {
+        "id": 57,
+        "name": "Quantinuum",
+        "tag_type": "company",
+        "description": "公司/组织: Quantinuum",
+        "article_count": 0
+      },
+      {
+        "id": 58,
+        "name": "D-Wave",
+        "tag_type": "company",
+        "description": "公司/组织: D-Wave",
+        "article_count": 0
+      },
+      {
+        "id": 59,
+        "name": "Moderna",
+        "tag_type": "company",
+        "description": "公司/组织: Moderna",
+        "article_count": 0
+      },
+      {
+        "id": 60,
+        "name": "BioNTech",
+        "tag_type": "company",
+        "description": "公司/组织: BioNTech",
+        "article_count": 0
+      },
+      {
+        "id": 61,
+        "name": "Illumina",
+        "tag_type": "company",
+        "description": "公司/组织: Illumina",
+        "article_count": 0
+      },
+      {
+        "id": 62,
+        "name": "CRISPR Therapeutics",
+        "tag_type": "company",
+        "description": "公司/组织: CRISPR Therapeutics",
+        "article_count": 0
+      },
+      {
+        "id": 63,
+        "name": "CFS",
+        "tag_type": "company",
+        "description": "公司/组织: CFS",
+        "article_count": 0
+      },
+      {
+        "id": 64,
+        "name": "Commonwealth Fusion",
+        "tag_type": "company",
+        "description": "公司/组织: Commonwealth Fusion",
+        "article_count": 0
+      },
+      {
+        "id": 65,
+        "name": "Helion Energy",
+        "tag_type": "company",
+        "description": "公司/组织: Helion Energy",
+        "article_count": 0
+      },
+      {
+        "id": 66,
+        "name": "TAE Technologies",
+        "tag_type": "company",
+        "description": "公司/组织: TAE Technologies",
+        "article_count": 0
+      },
+      {
+        "id": 67,
+        "name": "商汤",
+        "tag_type": "company",
+        "description": "公司/组织: 商汤",
+        "article_count": 0
+      },
+      {
+        "id": 68,
+        "name": "旷视",
+        "tag_type": "company",
+        "description": "公司/组织: 旷视",
+        "article_count": 0
+      },
+      {
+        "id": 69,
+        "name": "科大讯飞",
+        "tag_type": "company",
+        "description": "公司/组织: 科大讯飞",
+        "article_count": 0
+      },
+      {
+        "id": 70,
+        "name": "寒武纪",
+        "tag_type": "company",
+        "description": "公司/组织: 寒武纪",
+        "article_count": 0
+      },
+      {
+        "id": 71,
+        "name": "地平线",
+        "tag_type": "company",
+        "description": "公司/组织: 地平线",
+        "article_count": 0
+      },
+      {
+        "id": 72,
+        "name": "蔚来",
+        "tag_type": "company",
+        "description": "公司/组织: 蔚来",
+        "article_count": 0
+      },
+      {
+        "id": 73,
+        "name": "小鹏",
+        "tag_type": "company",
+        "description": "公司/组织: 小鹏",
+        "article_count": 0
+      },
+      {
+        "id": 74,
+        "name": "理想",
+        "tag_type": "company",
+        "description": "公司/组织: 理想",
+        "article_count": 0
+      },
+      {
+        "id": 75,
+        "name": "比亚迪",
+        "tag_type": "company",
+        "description": "公司/组织: 比亚迪",
+        "article_count": 0
+      },
+      {
+        "id": 76,
+        "name": "大疆",
+        "tag_type": "company",
+        "description": "公司/组织: 大疆",
+        "article_count": 0
+      },
+      {
+        "id": 77,
+        "name": "DJI",
+        "tag_type": "company",
+        "description": "公司/组织: DJI",
+        "article_count": 0
+      },
+      {
+        "id": 78,
+        "name": "Transformer",
+        "tag_type": "technology",
+        "description": "技术/概念: Transformer",
+        "article_count": 0
+      },
+      {
+        "id": 81,
+        "name": "GAN",
+        "tag_type": "technology",
+        "description": "技术/概念: GAN",
+        "article_count": 0
+      },
+      {
+        "id": 82,
+        "name": "VAE",
+        "tag_type": "technology",
+        "description": "技术/概念: VAE",
+        "article_count": 0
+      },
+      {
+        "id": 83,
+        "name": "Reinforcement Learning",
+        "tag_type": "technology",
+        "description": "技术/概念: Reinforcement Learning",
+        "article_count": 0
+      },
+      {
+        "id": 84,
+        "name": "Self-Supervised",
+        "tag_type": "technology",
+        "description": "技术/概念: Self-Supervised",
+        "article_count": 0
+      },
+      {
+        "id": 85,
+        "name": "Transfer Learning",
+        "tag_type": "technology",
+        "description": "技术/概念: Transfer Learning",
+        "article_count": 0
+      },
+      {
+        "id": 87,
+        "name": "Cas9",
+        "tag_type": "technology",
+        "description": "技术/概念: Cas9",
+        "article_count": 0
+      },
+      {
+        "id": 89,
+        "name": "mRNA",
+        "tag_type": "technology",
+        "description": "技术/概念: mRNA",
+        "article_count": 0
+      },
+      {
+        "id": 90,
+        "name": "CAR-T",
+        "tag_type": "technology",
+        "description": "技术/概念: CAR-T",
+        "article_count": 0
+      },
+      {
+        "id": 91,
+        "name": "Quantum Annealing",
+        "tag_type": "technology",
+        "description": "技术/概念: Quantum Annealing",
+        "article_count": 0
+      },
+      {
+        "id": 92,
+        "name": "Superconducting Qubit",
+        "tag_type": "technology",
+        "description": "技术/概念: Superconducting Qubit",
+        "article_count": 0
+      },
+      {
+        "id": 93,
+        "name": "Quantum Error Correction",
+        "tag_type": "technology",
+        "description": "技术/概念: Quantum Error Correction",
+        "article_count": 0
+      },
+      {
+        "id": 94,
+        "name": "Graphene",
+        "tag_type": "technology",
+        "description": "技术/概念: Graphene",
+        "article_count": 0
+      },
+      {
+        "id": 95,
+        "name": "Perovskite",
+        "tag_type": "technology",
+        "description": "技术/概念: Perovskite",
+        "article_count": 0
+      },
+      {
+        "id": 96,
+        "name": "MXene",
+        "tag_type": "technology",
+        "description": "技术/概念: MXene",
+        "article_count": 0
+      },
+      {
+        "id": 97,
+        "name": "Topological Insulator",
+        "tag_type": "technology",
+        "description": "技术/概念: Topological Insulator",
+        "article_count": 0
+      },
+      {
+        "id": 98,
+        "name": "Nuclear Fusion",
+        "tag_type": "technology",
+        "description": "技术/概念: Nuclear Fusion",
+        "article_count": 0
+      },
+      {
+        "id": 99,
+        "name": "Tokamak",
+        "tag_type": "technology",
+        "description": "技术/概念: Tokamak",
+        "article_count": 0
+      }
+    ],
+    "companies": [
+      {
+        "id": 1,
+        "name": "OpenAI",
+        "tag_type": "company",
+        "description": "公司/组织: OpenAI",
+        "article_count": 3
+      },
+      {
+        "id": 2,
+        "name": "Google DeepMind",
+        "tag_type": "company",
+        "description": "公司/组织: Google DeepMind",
+        "article_count": 1
+      },
+      {
+        "id": 3,
+        "name": "Anthropic",
+        "tag_type": "company",
+        "description": "公司/组织: Anthropic",
+        "article_count": 1
+      },
+      {
+        "id": 7,
+        "name": "Stability AI",
+        "tag_type": "company",
+        "description": "公司/组织: Stability AI",
+        "article_count": 1
+      },
+      {
+        "id": 18,
+        "name": "Google",
+        "tag_type": "company",
+        "description": "公司/组织: Google",
+        "article_count": 1
+      },
+      {
+        "id": 22,
+        "name": "NVIDIA",
+        "tag_type": "company",
+        "description": "公司/组织: NVIDIA",
+        "article_count": 1
+      },
+      {
+        "id": 23,
+        "name": "AMD",
+        "tag_type": "company",
+        "description": "公司/组织: AMD",
+        "article_count": 1
+      },
+      {
+        "id": 24,
+        "name": "Intel",
+        "tag_type": "company",
+        "description": "公司/组织: Intel",
+        "article_count": 1
+      },
+      {
+        "id": 4,
+        "name": "Meta AI",
+        "tag_type": "company",
+        "description": "公司/组织: Meta AI",
+        "article_count": 0
+      },
+      {
+        "id": 5,
+        "name": "Microsoft Research",
+        "tag_type": "company",
+        "description": "公司/组织: Microsoft Research",
+        "article_count": 0
+      },
+      {
+        "id": 6,
+        "name": "xAI",
+        "tag_type": "company",
+        "description": "公司/组织: xAI",
+        "article_count": 0
+      },
+      {
+        "id": 8,
+        "name": "Mistral",
+        "tag_type": "company",
+        "description": "公司/组织: Mistral",
+        "article_count": 0
+      },
+      {
+        "id": 9,
+        "name": "Cohere",
+        "tag_type": "company",
+        "description": "公司/组织: Cohere",
+        "article_count": 0
+      },
+      {
+        "id": 10,
+        "name": "Hugging Face",
+        "tag_type": "company",
+        "description": "公司/组织: Hugging Face",
+        "article_count": 0
+      },
+      {
+        "id": 11,
+        "name": "Midjourney",
+        "tag_type": "company",
+        "description": "公司/组织: Midjourney",
+        "article_count": 0
+      },
+      {
+        "id": 12,
+        "name": "Runway",
+        "tag_type": "company",
+        "description": "公司/组织: Runway",
+        "article_count": 0
+      },
+      {
+        "id": 13,
+        "name": "Perplexity",
+        "tag_type": "company",
+        "description": "公司/组织: Perplexity",
+        "article_count": 0
+      },
+      {
+        "id": 14,
+        "name": "Character.ai",
+        "tag_type": "company",
+        "description": "公司/组织: Character.ai",
+        "article_count": 0
+      },
+      {
+        "id": 15,
+        "name": "Inflection",
+        "tag_type": "company",
+        "description": "公司/组织: Inflection",
+        "article_count": 0
+      },
+      {
+        "id": 16,
+        "name": "Adept",
+        "tag_type": "company",
+        "description": "公司/组织: Adept",
+        "article_count": 0
+      }
+    ],
+    "technologies": [
+      {
+        "id": 79,
+        "name": "Attention",
+        "tag_type": "technology",
+        "description": "技术/概念: Attention",
+        "article_count": 1
+      },
+      {
+        "id": 80,
+        "name": "Diffusion Model",
+        "tag_type": "technology",
+        "description": "技术/概念: Diffusion Model",
+        "article_count": 1
+      },
+      {
+        "id": 86,
+        "name": "CRISPR",
+        "tag_type": "technology",
+        "description": "技术/概念: CRISPR",
+        "article_count": 1
+      },
+      {
+        "id": 88,
+        "name": "AlphaFold",
+        "tag_type": "technology",
+        "description": "技术/概念: AlphaFold",
+        "article_count": 1
+      },
+      {
+        "id": 102,
+        "name": "Brain-Computer Interface",
+        "tag_type": "technology",
+        "description": "技术/概念: Brain-Computer Interface",
+        "article_count": 1
+      },
+      {
+        "id": 78,
+        "name": "Transformer",
+        "tag_type": "technology",
+        "description": "技术/概念: Transformer",
+        "article_count": 0
+      },
+      {
+        "id": 81,
+        "name": "GAN",
+        "tag_type": "technology",
+        "description": "技术/概念: GAN",
+        "article_count": 0
+      },
+      {
+        "id": 82,
+        "name": "VAE",
+        "tag_type": "technology",
+        "description": "技术/概念: VAE",
+        "article_count": 0
+      },
+      {
+        "id": 83,
+        "name": "Reinforcement Learning",
+        "tag_type": "technology",
+        "description": "技术/概念: Reinforcement Learning",
+        "article_count": 0
+      },
+      {
+        "id": 84,
+        "name": "Self-Supervised",
+        "tag_type": "technology",
+        "description": "技术/概念: Self-Supervised",
+        "article_count": 0
+      },
+      {
+        "id": 85,
+        "name": "Transfer Learning",
+        "tag_type": "technology",
+        "description": "技术/概念: Transfer Learning",
+        "article_count": 0
+      },
+      {
+        "id": 87,
+        "name": "Cas9",
+        "tag_type": "technology",
+        "description": "技术/概念: Cas9",
+        "article_count": 0
+      },
+      {
+        "id": 89,
+        "name": "mRNA",
+        "tag_type": "technology",
+        "description": "技术/概念: mRNA",
+        "article_count": 0
+      },
+      {
+        "id": 90,
+        "name": "CAR-T",
+        "tag_type": "technology",
+        "description": "技术/概念: CAR-T",
+        "article_count": 0
+      },
+      {
+        "id": 91,
+        "name": "Quantum Annealing",
+        "tag_type": "technology",
+        "description": "技术/概念: Quantum Annealing",
+        "article_count": 0
+      },
+      {
+        "id": 92,
+        "name": "Superconducting Qubit",
+        "tag_type": "technology",
+        "description": "技术/概念: Superconducting Qubit",
+        "article_count": 0
+      },
+      {
+        "id": 93,
+        "name": "Quantum Error Correction",
+        "tag_type": "technology",
+        "description": "技术/概念: Quantum Error Correction",
+        "article_count": 0
+      },
+      {
+        "id": 94,
+        "name": "Graphene",
+        "tag_type": "technology",
+        "description": "技术/概念: Graphene",
+        "article_count": 0
+      },
+      {
+        "id": 95,
+        "name": "Perovskite",
+        "tag_type": "technology",
+        "description": "技术/概念: Perovskite",
+        "article_count": 0
+      },
+      {
+        "id": 96,
+        "name": "MXene",
+        "tag_type": "technology",
+        "description": "技术/概念: MXene",
+        "article_count": 0
+      },
+      {
+        "id": 97,
+        "name": "Topological Insulator",
+        "tag_type": "technology",
+        "description": "技术/概念: Topological Insulator",
+        "article_count": 0
+      },
+      {
+        "id": 98,
+        "name": "Nuclear Fusion",
+        "tag_type": "technology",
+        "description": "技术/概念: Nuclear Fusion",
+        "article_count": 0
+      },
+      {
+        "id": 99,
+        "name": "Tokamak",
+        "tag_type": "technology",
+        "description": "技术/概念: Tokamak",
+        "article_count": 0
+      },
+      {
+        "id": 100,
+        "name": "Stellarator",
+        "tag_type": "technology",
+        "description": "技术/概念: Stellarator",
+        "article_count": 0
+      },
+      {
+        "id": 101,
+        "name": "Solid-State Battery",
+        "tag_type": "technology",
+        "description": "技术/概念: Solid-State Battery",
+        "article_count": 0
+      },
+      {
+        "id": 103,
+        "name": "Neural Decoding",
+        "tag_type": "technology",
+        "description": "技术/概念: Neural Decoding",
+        "article_count": 0
+      },
+      {
+        "id": 104,
+        "name": "Optogenetics",
+        "tag_type": "technology",
+        "description": "技术/概念: Optogenetics",
+        "article_count": 0
+      },
+      {
+        "id": 105,
+        "name": "CRISPR Prime Editing",
+        "tag_type": "technology",
+        "description": "技术/概念: CRISPR Prime Editing",
+        "article_count": 0
+      },
+      {
+        "id": 106,
+        "name": "Base Editing",
+        "tag_type": "technology",
+        "description": "技术/概念: Base Editing",
+        "article_count": 0
+      },
+      {
+        "id": 107,
+        "name": "Protein Design",
+        "tag_type": "technology",
+        "description": "技术/概念: Protein Design",
+        "article_count": 0
+      }
+    ]
+  },
+  "trending": {
+    "companies": [
+      {
+        "id": 1,
+        "name": "OpenAI",
+        "tag_type": "company",
+        "description": "公司/组织: OpenAI",
+        "article_count": 3
+      },
+      {
+        "id": 2,
+        "name": "Google DeepMind",
+        "tag_type": "company",
+        "description": "公司/组织: Google DeepMind",
+        "article_count": 1
+      },
+      {
+        "id": 3,
+        "name": "Anthropic",
+        "tag_type": "company",
+        "description": "公司/组织: Anthropic",
+        "article_count": 1
+      },
+      {
+        "id": 7,
+        "name": "Stability AI",
+        "tag_type": "company",
+        "description": "公司/组织: Stability AI",
+        "article_count": 1
+      },
+      {
+        "id": 18,
+        "name": "Google",
+        "tag_type": "company",
+        "description": "公司/组织: Google",
+        "article_count": 1
+      },
+      {
+        "id": 22,
+        "name": "NVIDIA",
+        "tag_type": "company",
+        "description": "公司/组织: NVIDIA",
+        "article_count": 1
+      },
+      {
+        "id": 23,
+        "name": "AMD",
+        "tag_type": "company",
+        "description": "公司/组织: AMD",
+        "article_count": 1
+      },
+      {
+        "id": 24,
+        "name": "Intel",
+        "tag_type": "company",
+        "description": "公司/组织: Intel",
+        "article_count": 1
+      },
+      {
+        "id": 4,
+        "name": "Meta AI",
+        "tag_type": "company",
+        "description": "公司/组织: Meta AI",
+        "article_count": 0
+      },
+      {
+        "id": 5,
+        "name": "Microsoft Research",
+        "tag_type": "company",
+        "description": "公司/组织: Microsoft Research",
+        "article_count": 0
+      },
+      {
+        "id": 6,
+        "name": "xAI",
+        "tag_type": "company",
+        "description": "公司/组织: xAI",
+        "article_count": 0
+      },
+      {
+        "id": 8,
+        "name": "Mistral",
+        "tag_type": "company",
+        "description": "公司/组织: Mistral",
+        "article_count": 0
+      },
+      {
+        "id": 9,
+        "name": "Cohere",
+        "tag_type": "company",
+        "description": "公司/组织: Cohere",
+        "article_count": 0
+      },
+      {
+        "id": 10,
+        "name": "Hugging Face",
+        "tag_type": "company",
+        "description": "公司/组织: Hugging Face",
+        "article_count": 0
+      },
+      {
+        "id": 11,
+        "name": "Midjourney",
+        "tag_type": "company",
+        "description": "公司/组织: Midjourney",
+        "article_count": 0
+      },
+      {
+        "id": 12,
+        "name": "Runway",
+        "tag_type": "company",
+        "description": "公司/组织: Runway",
+        "article_count": 0
+      },
+      {
+        "id": 13,
+        "name": "Perplexity",
+        "tag_type": "company",
+        "description": "公司/组织: Perplexity",
+        "article_count": 0
+      },
+      {
+        "id": 14,
+        "name": "Character.ai",
+        "tag_type": "company",
+        "description": "公司/组织: Character.ai",
+        "article_count": 0
+      },
+      {
+        "id": 15,
+        "name": "Inflection",
+        "tag_type": "company",
+        "description": "公司/组织: Inflection",
+        "article_count": 0
+      },
+      {
+        "id": 16,
+        "name": "Adept",
+        "tag_type": "company",
+        "description": "公司/组织: Adept",
+        "article_count": 0
+      }
+    ],
+    "technologies": [
+      {
+        "id": 79,
+        "name": "Attention",
+        "tag_type": "technology",
+        "description": "技术/概念: Attention",
+        "article_count": 1
+      },
+      {
+        "id": 80,
+        "name": "Diffusion Model",
+        "tag_type": "technology",
+        "description": "技术/概念: Diffusion Model",
+        "article_count": 1
+      },
+      {
+        "id": 86,
+        "name": "CRISPR",
+        "tag_type": "technology",
+        "description": "技术/概念: CRISPR",
+        "article_count": 1
+      },
+      {
+        "id": 88,
+        "name": "AlphaFold",
+        "tag_type": "technology",
+        "description": "技术/概念: AlphaFold",
+        "article_count": 1
+      },
+      {
+        "id": 102,
+        "name": "Brain-Computer Interface",
+        "tag_type": "technology",
+        "description": "技术/概念: Brain-Computer Interface",
+        "article_count": 1
+      },
+      {
+        "id": 78,
+        "name": "Transformer",
+        "tag_type": "technology",
+        "description": "技术/概念: Transformer",
+        "article_count": 0
+      },
+      {
+        "id": 81,
+        "name": "GAN",
+        "tag_type": "technology",
+        "description": "技术/概念: GAN",
+        "article_count": 0
+      },
+      {
+        "id": 82,
+        "name": "VAE",
+        "tag_type": "technology",
+        "description": "技术/概念: VAE",
+        "article_count": 0
+      },
+      {
+        "id": 83,
+        "name": "Reinforcement Learning",
+        "tag_type": "technology",
+        "description": "技术/概念: Reinforcement Learning",
+        "article_count": 0
+      },
+      {
+        "id": 84,
+        "name": "Self-Supervised",
+        "tag_type": "technology",
+        "description": "技术/概念: Self-Supervised",
+        "article_count": 0
+      },
+      {
+        "id": 85,
+        "name": "Transfer Learning",
+        "tag_type": "technology",
+        "description": "技术/概念: Transfer Learning",
+        "article_count": 0
+      },
+      {
+        "id": 87,
+        "name": "Cas9",
+        "tag_type": "technology",
+        "description": "技术/概念: Cas9",
+        "article_count": 0
+      },
+      {
+        "id": 89,
+        "name": "mRNA",
+        "tag_type": "technology",
+        "description": "技术/概念: mRNA",
+        "article_count": 0
+      },
+      {
+        "id": 90,
+        "name": "CAR-T",
+        "tag_type": "technology",
+        "description": "技术/概念: CAR-T",
+        "article_count": 0
+      },
+      {
+        "id": 91,
+        "name": "Quantum Annealing",
+        "tag_type": "technology",
+        "description": "技术/概念: Quantum Annealing",
+        "article_count": 0
+      },
+      {
+        "id": 92,
+        "name": "Superconducting Qubit",
+        "tag_type": "technology",
+        "description": "技术/概念: Superconducting Qubit",
+        "article_count": 0
+      },
+      {
+        "id": 93,
+        "name": "Quantum Error Correction",
+        "tag_type": "technology",
+        "description": "技术/概念: Quantum Error Correction",
+        "article_count": 0
+      },
+      {
+        "id": 94,
+        "name": "Graphene",
+        "tag_type": "technology",
+        "description": "技术/概念: Graphene",
+        "article_count": 0
+      },
+      {
+        "id": 95,
+        "name": "Perovskite",
+        "tag_type": "technology",
+        "description": "技术/概念: Perovskite",
+        "article_count": 0
+      },
+      {
+        "id": 96,
+        "name": "MXene",
+        "tag_type": "technology",
+        "description": "技术/概念: MXene",
+        "article_count": 0
+      },
+      {
+        "id": 97,
+        "name": "Topological Insulator",
+        "tag_type": "technology",
+        "description": "技术/概念: Topological Insulator",
+        "article_count": 0
+      },
+      {
+        "id": 98,
+        "name": "Nuclear Fusion",
+        "tag_type": "technology",
+        "description": "技术/概念: Nuclear Fusion",
+        "article_count": 0
+      },
+      {
+        "id": 99,
+        "name": "Tokamak",
+        "tag_type": "technology",
+        "description": "技术/概念: Tokamak",
+        "article_count": 0
+      },
+      {
+        "id": 100,
+        "name": "Stellarator",
+        "tag_type": "technology",
+        "description": "技术/概念: Stellarator",
+        "article_count": 0
+      },
+      {
+        "id": 101,
+        "name": "Solid-State Battery",
+        "tag_type": "technology",
+        "description": "技术/概念: Solid-State Battery",
+        "article_count": 0
+      },
+      {
+        "id": 103,
+        "name": "Neural Decoding",
+        "tag_type": "technology",
+        "description": "技术/概念: Neural Decoding",
+        "article_count": 0
+      },
+      {
+        "id": 104,
+        "name": "Optogenetics",
+        "tag_type": "technology",
+        "description": "技术/概念: Optogenetics",
+        "article_count": 0
+      },
+      {
+        "id": 105,
+        "name": "CRISPR Prime Editing",
+        "tag_type": "technology",
+        "description": "技术/概念: CRISPR Prime Editing",
+        "article_count": 0
+      },
+      {
+        "id": 106,
+        "name": "Base Editing",
+        "tag_type": "technology",
+        "description": "技术/概念: Base Editing",
+        "article_count": 0
+      },
+      {
+        "id": 107,
+        "name": "Protein Design",
+        "tag_type": "technology",
+        "description": "技术/概念: Protein Design",
+        "article_count": 0
+      }
+    ]
+  }
+}

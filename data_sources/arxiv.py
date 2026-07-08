@@ -41,7 +41,7 @@ class ArXivDataSource(DataSource):
             })
             full_url = f"{url}?{params}"
             
-            ctx = ssl.create_default_context()
+            ctx = ssl._create_unverified_context()
             
             req = urllib.request.Request(full_url)
             with urllib.request.urlopen(req, context=ctx, timeout=15) as response:
@@ -126,5 +126,6 @@ class ArXivDataSource(DataSource):
                 tags=["基础模型", "训练效率", "优化"]
             )
         ]
+
 
 

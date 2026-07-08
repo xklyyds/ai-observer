@@ -79,12 +79,18 @@ def generate_frontend_data():
     # Generate trending tags
     company_tags = get_tags(tag_type="company", limit=20)
     tech_tags = get_tags(tag_type="technology", limit=30)
-
+    all_tags = get_tags(limit=100)
+  
     output = {
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "stats": stats,
         "categories": category_tree,
         "latest_articles": articles,
+        "tags": {
+            "all": all_tags,
+            "companies": company_tags,
+            "technologies": tech_tags
+        },
         "trending": {
             "companies": company_tags,
             "technologies": tech_tags
@@ -141,3 +147,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

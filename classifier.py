@@ -5,6 +5,7 @@ and extract entity tags (companies, technologies, people).
 """
 
 import re
+import logging
 import sqlite3
 from typing import List, Dict, Set, Optional
 from dataclasses import dataclass, field

@@ -2,6 +2,8 @@
 import sys
 import json
 import smtplib
+import threading
+import time
 from email.message import EmailMessage
 from pathlib import Path
 
@@ -39,6 +41,23 @@ app.secret_key = SERVER_CONFIG.get("secret_key", "change-this")
 init_knowledge_store()
 init_db()
 seed_taxonomy()
+
+# === Background initialization (for Render deployment) ===
+def _background_init():
+    from crawler import crawl_all_sources, generate_frontend_data
+    try:
+        stats = get_stats()
+        if stats.get("total_articles", 0) > 0:
+            return
+        logger.info("Database empty, starting background crawl...")
+        result = crawl_all_sources()
+        generate_frontend_data()
+        logger.info(f"Background crawl complete: {result}")
+    except Exception as e:
+        logger.warning(f"Background crawl skipped: {e}")
+
+
+threading.Thread(target=_background_init, daemon=True).start()
 
 
 # === Email Helpers ===
@@ -238,3 +257,4 @@ if __name__ == "__main__":
     logger.info(f"Server at http://localhost:{port}")
     print(f"Knowledge explorer at http://localhost:{port}")
     app.run(host=host, port=port, debug=True)
+
