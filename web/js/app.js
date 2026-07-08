@@ -229,9 +229,8 @@ const App = {
         document.querySelectorAll('[data-route]').forEach(link => {
             link.addEventListener('click', (e) => {
                 const route = link.dataset.route;
-                if (window.location.hash !== `#${route}`) {
-                    window.location.hash = route;
-                }
+                window.location.hash = route;
+                this.handleRoute();
             });
         });
     },
