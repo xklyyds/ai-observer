@@ -1,5 +1,7 @@
 const App = {
     data: null,
+    supabase: null,
+    deletedItems: { reports: [], news: {} },
     filters: {
         search: '',
         category: '',
@@ -9,74 +11,151 @@ const App = {
     currentPage: 1,
     pageSize: 10,
     
-    getDeletedItems() {
+    initSupabase() {
+        const supabaseUrl = 'https://spgmbocskmtaorgbiawl.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNwZ21ib2Nza210YW9yZ2JpYXdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM0NzQwNzMsImV4cCI6MjA5OTA1MDA3M30.MyhNCGnWDhDCgOln1sxHXMBAikQZKjvYaBsVQUrYdeY';
+        
+        if (supabaseUrl.includes('your-project-url') || supabaseKey.includes('your-anon-key')) {
+            console.warn('Supabase not configured - using localStorage fallback');
+            this.loadDeletedItemsFromLocal();
+            return;
+        }
+        
+        this.supabase = window.createClient(supabaseUrl, supabaseKey);
+        this.loadDeletedItems();
+    },
+    
+    async loadDeletedItems() {
+        try {
+            const [reportsRes, newsRes] = await Promise.all([
+                this.supabase.from('deleted_reports').select('date'),
+                this.supabase.from('deleted_news').select('report_date, news_id')
+            ]);
+            
+            this.deletedItems = {
+                reports: reportsRes.data?.map(r => r.date) || [],
+                news: {}
+            };
+            
+            newsRes.data?.forEach(item => {
+                const key = `${item.report_date}_${item.news_id}`;
+                this.deletedItems.news[key] = true;
+            });
+            
+            this.cacheDeletedItems();
+        } catch (e) {
+            console.error('Failed to load deleted items from Supabase:', e);
+            this.loadDeletedItemsFromLocal();
+        }
+    },
+    
+    loadDeletedItemsFromLocal() {
         try {
             const stored = localStorage.getItem('aiobserver_deleted');
-            return stored ? JSON.parse(stored) : { reports: [], news: {} };
+            this.deletedItems = stored ? JSON.parse(stored) : { reports: [], news: {} };
         } catch {
-            return { reports: [], news: {} };
+            this.deletedItems = { reports: [], news: {} };
         }
     },
     
-    saveDeletedItems(items) {
-        localStorage.setItem('aiobserver_deleted', JSON.stringify(items));
+    cacheDeletedItems() {
+        localStorage.setItem('aiobserver_deleted', JSON.stringify(this.deletedItems));
     },
     
-    isReportDeleted(date) {
-        const deleted = this.getDeletedItems();
-        return deleted.reports.includes(date);
-    },
-    
-    isNewsDeleted(date, newsId) {
-        const deleted = this.getDeletedItems();
-        const key = `${date}_${newsId}`;
-        return deleted.news[key] === true;
-    },
-    
-    deleteReport(date) {
-        const deleted = this.getDeletedItems();
-        if (!deleted.reports.includes(date)) {
-            deleted.reports.push(date);
-            this.saveDeletedItems(deleted);
+    async deleteReport(date) {
+        if (this.deletedItems.reports.includes(date)) {
+            return;
         }
+        
+        this.deletedItems.reports.push(date);
+        this.cacheDeletedItems();
+        
+        if (this.supabase) {
+            try {
+                await this.supabase.from('deleted_reports').upsert({ date });
+            } catch (e) {
+                console.error('Failed to delete report:', e);
+            }
+        }
+        
         this.refreshData();
     },
     
-    deleteNews(date, newsId) {
-        const deleted = this.getDeletedItems();
+    async deleteNews(date, newsId) {
         const key = `${date}_${newsId}`;
-        deleted.news[key] = true;
-        this.saveDeletedItems(deleted);
+        if (this.deletedItems.news[key]) {
+            return;
+        }
+        
+        this.deletedItems.news[key] = true;
+        this.cacheDeletedItems();
+        
+        if (this.supabase) {
+            try {
+                await this.supabase.from('deleted_news').upsert({ report_date: date, news_id: newsId });
+            } catch (e) {
+                console.error('Failed to delete news:', e);
+            }
+        }
+        
         this.refreshData();
     },
     
-    restoreReport(date) {
-        const deleted = this.getDeletedItems();
-        deleted.reports = deleted.reports.filter(d => d !== date);
-        this.saveDeletedItems(deleted);
+    async restoreReport(date) {
+        this.deletedItems.reports = this.deletedItems.reports.filter(d => d !== date);
+        this.cacheDeletedItems();
+        
+        if (this.supabase) {
+            try {
+                await this.supabase.from('deleted_reports').delete().eq('date', date);
+            } catch (e) {
+                console.error('Failed to restore report:', e);
+            }
+        }
+        
         this.refreshData();
     },
     
-    restoreNews(date, newsId) {
-        const deleted = this.getDeletedItems();
+    async restoreNews(date, newsId) {
         const key = `${date}_${newsId}`;
-        delete deleted.news[key];
-        this.saveDeletedItems(deleted);
+        delete this.deletedItems.news[key];
+        this.cacheDeletedItems();
+        
+        if (this.supabase) {
+            try {
+                await this.supabase.from('deleted_news').delete()
+                    .eq('report_date', date)
+                    .eq('news_id', newsId);
+            } catch (e) {
+                console.error('Failed to restore news:', e);
+            }
+        }
+        
         this.refreshData();
     },
     
-    clearAllDeleted() {
+    async clearAllDeleted() {
+        this.deletedItems = { reports: [], news: {} };
         localStorage.removeItem('aiobserver_deleted');
+        
+        if (this.supabase) {
+            try {
+                await this.supabase.from('deleted_reports').delete();
+                await this.supabase.from('deleted_news').delete();
+            } catch (e) {
+                console.error('Failed to clear deleted:', e);
+            }
+        }
+        
         this.refreshData();
     },
     
     getFilteredReports() {
-        const deleted = this.getDeletedItems();
         return (this.data?.reports || []).filter(report => {
-            if (deleted.reports.includes(report.date)) return false;
+            if (this.deletedItems.reports.includes(report.date)) return false;
             report.news = report.news.filter(news => {
                 const key = `${report.date}_${news.id}`;
-                return deleted.news[key] !== true;
+                return this.deletedItems.news[key] !== true;
             });
             report.newsCount = report.news.length;
             return report.news.length > 0;
@@ -84,6 +163,7 @@ const App = {
     },
     
     async init() {
+        this.initSupabase();
         await this.loadData();
         this.updateSidebarStats();
         this.setupSidebarToggle();
@@ -111,10 +191,13 @@ const App = {
     },
     
     updateSidebarStats() {
-        const stats = this.data?.stats || {};
-        document.getElementById('totalReports').textContent = stats.totalReports || 0;
-        document.getElementById('totalNews').textContent = stats.totalNews || 0;
-        document.getElementById('lastUpdate').textContent = stats.latestDate ? `更新于 ${stats.latestDate}` : '暂无数据';
+        const filteredReports = this.getFilteredReports();
+        const totalNews = filteredReports.reduce((acc, r) => acc + r.newsCount, 0);
+        const latestDate = filteredReports[0]?.displayDate || '';
+        
+        document.getElementById('totalReports').textContent = filteredReports.length || 0;
+        document.getElementById('totalNews').textContent = totalNews || 0;
+        document.getElementById('lastUpdate').textContent = latestDate ? `更新于 ${latestDate}` : '暂无数据';
     },
     
     setupSidebarToggle() {
@@ -310,13 +393,19 @@ const App = {
     },
     
     renderDashboard() {
-        const stats = this.data?.stats || { totalReports: 0, totalNews: 0, latestDate: '', sources: [], categories: [], tags: [] };
-        const latestReport = this.data?.reports?.[0] || null;
+        const filteredReports = this.getFilteredReports();
+        const latestReport = filteredReports[0] || null;
         
+        const totalNews = filteredReports.reduce((acc, r) => acc + r.newsCount, 0);
         const categoryCounts = {};
-        this.data?.reports?.forEach(report => {
+        const sourcesSet = new Set();
+        const categoriesSet = new Set();
+        
+        filteredReports.forEach(report => {
             report.news.forEach(news => {
                 categoryCounts[news.category] = (categoryCounts[news.category] || 0) + 1;
+                sourcesSet.add(news.source);
+                categoriesSet.add(news.category);
             });
         });
         
@@ -335,7 +424,7 @@ const App = {
                             <polyline points="14 2 14 8 20 8"></polyline>
                         </svg>
                     </div>
-                    <div class="stat-card-value">${stats.totalReports}</div>
+                    <div class="stat-card-value">${filteredReports.length}</div>
                     <div class="stat-card-label">日报总数</div>
                 </div>
                 <div class="stat-card">
@@ -345,7 +434,7 @@ const App = {
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
                     </div>
-                    <div class="stat-card-value">${stats.totalNews}</div>
+                    <div class="stat-card-value">${totalNews}</div>
                     <div class="stat-card-label">新闻条目</div>
                 </div>
                 <div class="stat-card">
@@ -357,7 +446,7 @@ const App = {
                             <rect x="3" y="14" width="7" height="7"></rect>
                         </svg>
                     </div>
-                    <div class="stat-card-value">${stats.categories?.length || 0}</div>
+                    <div class="stat-card-value">${categoriesSet.size}</div>
                     <div class="stat-card-label">话题分类</div>
                 </div>
                 <div class="stat-card">
@@ -367,7 +456,7 @@ const App = {
                             <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
                         </svg>
                     </div>
-                    <div class="stat-card-value">${stats.sources?.length || 0}</div>
+                    <div class="stat-card-value">${sourcesSet.size}</div>
                     <div class="stat-card-label">数据源</div>
                 </div>
             </div>
@@ -408,7 +497,7 @@ const App = {
                         <a href="#/search" class="section-link">搜索 →</a>
                     </div>
                     <div class="tags-cloud">
-                        ${(stats.tags || []).slice(0, 15).map(tag => {
+                        ${Object.keys(categoryCounts).slice(0, 15).map(tag => {
                             const count = categoryCounts[tag] || 1;
                             const weight = Math.min(count / 3, 1);
                             const fontSize = 13 + weight * 6;
@@ -427,7 +516,7 @@ const App = {
                     <h2 class="section-title">数据源分布</h2>
                 </div>
                 <div class="source-stats">
-                    ${(stats.sources || []).slice(0, 6).map(source => `
+                    ${Array.from(sourcesSet).slice(0, 6).map(source => `
                         <div class="source-stat-item">
                             <span class="source-dot"></span>
                             <span class="source-name">${source}</span>
@@ -441,7 +530,8 @@ const App = {
     
     getSourceCount(source) {
         let count = 0;
-        this.data?.reports?.forEach(report => {
+        const filteredReports = this.getFilteredReports();
+        filteredReports.forEach(report => {
             report.news.forEach(news => {
                 if (news.source === source) count++;
             });
