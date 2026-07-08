@@ -29,8 +29,10 @@ from knowledge_store import (
 from classifier import seed_taxonomy
 from utils.logger import setup_logger
 from utils.config_loader import load_env_file
+from utils.http_client import setup_pythonanywhere_proxy
 
 load_env_file()
+setup_pythonanywhere_proxy()
 logger = setup_logger("Server")
 
 app = Flask(__name__, static_folder="web", static_url_path="")

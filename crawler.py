@@ -20,8 +20,10 @@ from knowledge_store import init_knowledge_store, get_stats, get_articles, get_c
 from subscription_manager import init_db as init_subscriptions_db
 from utils.logger import setup_logger
 from utils.config_loader import load_env_file
+from utils.http_client import setup_pythonanywhere_proxy
 
 load_env_file()
+setup_pythonanywhere_proxy()
 logger = setup_logger("Crawler")
 
 

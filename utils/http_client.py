@@ -31,3 +31,21 @@ def make_request(url: str, method: str = "GET", headers: Dict = None,
         return {"content": content} if "content" in locals() else {"error": "Invalid JSON response"}
     except Exception as e:
         return {"error": str(e)}
+
+def setup_pythonanywhere_proxy():
+    """Set global proxy for PythonAnywhere free accounts.
+    Free accounts must route external HTTP through proxy.server:3128.
+    Detects PA automatically - no config needed."""
+    import os
+    if os.path.exists('/home') and not os.environ.get('NO_PROXY'):
+        try:
+            proxy_handler = urllib.request.ProxyHandler({
+                'http': 'http://proxy.server:3128',
+                'https': 'http://proxy.server:3128'
+            })
+            opener = urllib.request.build_opener(proxy_handler)
+            urllib.request.install_opener(opener)
+            print("PythonAnywhere proxy configured")
+        except Exception:
+            pass
+
