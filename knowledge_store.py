@@ -409,8 +409,8 @@ def get_stats() -> Dict:
         stats["total_categories"] = cursor.fetchone()[0]
         cursor = conn.execute("SELECT COUNT(*) FROM tags")
         stats["total_tags"] = cursor.fetchone()[0]
-        cursor = conn.execute("SELECT COUNT(*) FROM sources WHERE active = 1")
-        stats["active_sources"] = cursor.fetchone()[0]
+          cursor = conn.execute("SELECT COUNT(DISTINCT source_name) FROM articles")
+          stats["active_sources"] = cursor.fetchone()[0] or 0
         cursor = conn.execute(
             "SELECT COUNT(DISTINCT email) FROM topic_subscriptions WHERE verified = 1"
         )
